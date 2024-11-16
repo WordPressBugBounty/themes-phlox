@@ -1,9 +1,9 @@
 # Averta Copyright (c) {2024}
 msgid ""
 msgstr ""
-"Project-Id-Version: Phlox 2.16.5\n"
+"Project-Id-Version: Phlox 2.16.7\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2024-08-17 13:38:29+00:00\n"
+"POT-Creation-Date: 2024-11-16 08:53:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -697,30 +697,30 @@ msgstr ""
 msgid "Add Global Color"
 msgstr ""
 
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:79
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:82
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:82
+#: auxin/auxin-include/classes/class-auxin-customize-section.php:81
+#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:84
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:84
 msgid "Press return or enter to open this section"
 msgstr ""
 
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:81
+#: auxin/auxin-include/classes/class-auxin-customize-section.php:83
 #: auxin/auxin-include/classes/class-auxin-metabox-hub.php:131
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:84
+#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:86
 #: build/phlox/auxin/auxin-include/classes/class-auxin-metabox-hub.php:134
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:84
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:86
 #: build/phlox-pro/auxin/auxin-include/classes/class-auxin-metabox-hub.php:134
 msgid "Deprecated"
 msgstr ""
 
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:89
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:92
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:92
+#: auxin/auxin-include/classes/class-auxin-customize-section.php:91
+#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:94
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:94
 msgid "Back"
 msgstr ""
 
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:98
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:101
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:101
+#: auxin/auxin-include/classes/class-auxin-customize-section.php:100
+#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:103
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:103
 msgid "Help"
 msgstr ""
 
@@ -2472,166 +2472,166 @@ msgstr ""
 msgid "Footer Social Menu"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1138
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1109
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1109
+#: auxin/auxin-include/include/hooks-general.php:1139
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1110
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1110
 msgid "Likes"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1161
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1132
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1132
+#: auxin/auxin-include/include/hooks-general.php:1162
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1133
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1133
 msgid "Global Primary Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1163
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1134
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1134
+#: auxin/auxin-include/include/hooks-general.php:1164
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1135
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1135
 msgid "It is accessible everywhere on primary sidebars."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1171
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1142
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1142
+#: auxin/auxin-include/include/hooks-general.php:1172
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1143
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1143
 msgid "Global Secondary Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1173
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1144
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1144
+#: auxin/auxin-include/include/hooks-general.php:1174
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1145
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1145
 msgid "It is accessible everywhere on secondary sidebars."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1182
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1153
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1153
+#: auxin/auxin-include/include/hooks-general.php:1183
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1154
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1154
 msgid "Shop Sidebar Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1184
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1155
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1155
+#: auxin/auxin-include/include/hooks-general.php:1185
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1156
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1156
 msgid "It is accessible on shop page sidebar."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1193
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1164
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1164
+#: auxin/auxin-include/include/hooks-general.php:1194
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1165
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1165
 msgid "Pages Primary Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1195
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1166
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1166
+#: auxin/auxin-include/include/hooks-general.php:1196
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1167
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1167
 msgid "It is accessible on primary sidebars except the blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1203
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1174
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1174
+#: auxin/auxin-include/include/hooks-general.php:1204
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1175
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1175
 msgid "Pages Secondary Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1205
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1176
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1176
+#: auxin/auxin-include/include/hooks-general.php:1206
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1177
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1177
 msgid "It is accessible on secondary sidebars except the blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1213
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1184
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1184
+#: auxin/auxin-include/include/hooks-general.php:1214
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1185
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1185
 msgid "Blog Primary Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1215
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1186
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1186
+#: auxin/auxin-include/include/hooks-general.php:1216
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1187
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1187
 msgid "It is accessible only on primary sidebars in blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1223
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1194
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1194
+#: auxin/auxin-include/include/hooks-general.php:1224
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1195
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1195
 msgid "Blog Secondary Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1225
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1196
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1196
+#: auxin/auxin-include/include/hooks-general.php:1226
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1197
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1197
 msgid "It is accessible only on secondary sidebars in blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1233
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1204
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1204
+#: auxin/auxin-include/include/hooks-general.php:1234
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1205
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1205
 msgid "Search Result Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1235
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1206
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1206
+#: auxin/auxin-include/include/hooks-general.php:1236
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1207
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1207
 msgid "It is accessible only on primary sidebars in search result page."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1245
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1216
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1216
+#: auxin/auxin-include/include/hooks-general.php:1246
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1217
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1217
 msgid "Subfooter Bar Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1247
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1218
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1218
+#: auxin/auxin-include/include/hooks-general.php:1248
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1219
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1219
 msgid ""
 "The widget area above the subfooter section. Perfect for placing the "
 "\"Newsletter\", \"Social icons\" or \"Instagram\" widget."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1267
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1238
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1238
+#: auxin/auxin-include/include/hooks-general.php:1268
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1239
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1239
 msgid "Subfooter %s Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1269
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1240
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1240
+#: auxin/auxin-include/include/hooks-general.php:1270
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1241
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1241
 msgid "The %s column in subfooter section."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1320
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1291
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1291
+#: auxin/auxin-include/include/hooks-general.php:1321
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1292
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1292
 msgid "Post Options"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1328
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1299
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1299
+#: auxin/auxin-include/include/hooks-general.php:1329
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1300
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1300
 msgid "Page Options"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1372
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1343
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1343
+#: auxin/auxin-include/include/hooks-general.php:1373
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1344
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1344
 msgid "Loading"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1576
+#: auxin/auxin-include/include/hooks-general.php:1577
 #: auxin-content/options/auxin-options.php:1245
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1547
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1548
 #: build/phlox/auxin-content/options/auxin-options.php:1182
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1547
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1548
 #: build/phlox-pro/auxin-content/options/auxin-options.php:1182
 msgid "Add a Comment"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1577
+#: auxin/auxin-include/include/hooks-general.php:1578
 #: auxin-content/options/auxin-options.php:1266
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1548
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1549
 #: build/phlox/auxin-content/options/auxin-options.php:1203
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1548
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1549
 #: build/phlox-pro/auxin-content/options/auxin-options.php:1203
 msgid "Your email address will not be published. Required fields are marked *"
 msgstr ""

@@ -1,4 +1,4 @@
-/*! Auxin WordPress Framework - v2.16.5 (2024-08-17)
+/*! Auxin WordPress Framework - v2.16.7 (2024-11-16)
  *  Scripts for initializing plugins 
  *  http://averta.net
  *  (c) 2014-2024 averta;
@@ -3137,6 +3137,19 @@ for ( var i = 0 ; UlikeHeart.length > i; i++){
     // Init some modules on doc ready
     $(function(){
         AuxinInitElementsOnReady();
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var shopTitles = document.querySelectorAll('.auxshp-title-heading');
+
+        shopTitles.forEach(function(title){
+            var parent = title.parentElement;
+            var parentFontFamily = window.getComputedStyle(parent).fontFamily;
+
+            if (parentFontFamily !== 'inherit') {
+                title.style.fontFamily = parentFontFamily;
+            }
+        });
     });
 
 })(jQuery, window, document);

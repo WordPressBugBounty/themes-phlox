@@ -847,7 +847,8 @@ function auxin_allow_css_properties( $properties ) {
         'stroke',
         'stroke-width',
         'stroke-opacity',
-        'fill-opacity'
+        'fill-opacity',
+        'mix-blend-mode'
     ]);
 }
 add_filter( 'safe_style_css', 'auxin_allow_css_properties' );

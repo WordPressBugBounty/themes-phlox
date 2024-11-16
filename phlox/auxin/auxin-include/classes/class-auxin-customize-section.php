@@ -78,14 +78,16 @@ class Auxin_Customize_Section extends WP_Customize_Section {
         ?>
         <li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }}">
             <h3 class="accordion-section-title" tabindex="0">
-                {{ data.title }}
+                <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="{{ data.id }}-content">
+                    {{ data.title }}
+                </button>
                 <span class="screen-reader-text"><?php _e( 'Press return or enter to open this section', 'phlox' ); ?></span>
                 <# if ( data.isDeprecated ) { #>
                     <span class="aux-deprecated"><?php _e( 'Deprecated', 'phlox' ); ?></span>
                 <# } #>
             </h3>
 
-            <ul class="accordion-section-content">
+            <ul class="accordion-section-content" id="{{ data.id }}-content">
                 <li class="customize-section-description-container section-meta <# if ( data.description_hidden ) { #>customize-info<# } #>">
                     <div class="customize-section-title">
                         <button class="customize-section-back" tabindex="-1">
