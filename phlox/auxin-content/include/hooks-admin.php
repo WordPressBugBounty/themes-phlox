@@ -31,7 +31,7 @@ function auxin_theme_register_recommended_plugins() {
             'name'             => __('Phlox Core Elements', 'phlox'),
             'slug'             => 'auxin-elements',
             'version'          => '2.15.6',
-            'source'           => 'https://www.phlox.pro/wp-content/uploads/2024/04/auxin-elements.zip',
+            'source'           => 'https://www.phlox.pro/wp-content/uploads/2024/12/auxin-elements.zip',
             'badge'            => __( 'Exclusive', 'phlox' ),
             'required'         => true,
             'categories'       => array('auxin', 'essential', 'bundled')

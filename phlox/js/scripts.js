@@ -1,4 +1,4 @@
-/*! Auxin WordPress Framework - v2.16.7 (2024-11-16)
+/*! Auxin WordPress Framework - v2.17.0 (2024-12-17)
  *  Scripts for initializing plugins 
  *  http://averta.net
  *  (c) 2014-2024 averta;
@@ -70,7 +70,7 @@ function auxin_get_contrast( color ){
             footerHeight = $('#sitefooter').outerHeight();
 
             gotoTopBtn.on( 'click touchstart', function() {
-                $window.scrollTo( 0, {duration: gotoTopBtn.data('animate-scroll') ? 1500 : 0,  easing:'easeInOutQuart'});
+                $window.scrollTo( 0, {easing:'easeInOutQuart'});
             } );
 
             gotoTopBtn.css('display', 'block');
@@ -143,7 +143,9 @@ function auxin_get_contrast( color ){
                             target       = document.querySelector( this.hash );
 
                         if ( target ) {
-                            $window.scrollTo( $(target).offset().top - headerStickyHeight, this.classList.contains( 'aux-jump' )  ? 0 : 1500,  {easing:'easeInOutQuart'});
+                            $window.scrollTo($(target).offset().top - headerStickyHeight, {
+                                easing: 'easeInOutQuart'
+                            });
                         }
 
                         if  ( isFullScreen ) {

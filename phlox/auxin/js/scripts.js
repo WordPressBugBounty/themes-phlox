@@ -1,4 +1,4 @@
-/*! Auxin WordPress Framework - v2.16.7 - 2024-11-16
+/*! Auxin WordPress Framework - v2.17.0 - 2024-12-17
  *  Scripts for initializing admin plugins 
 
  *  http://averta.net
@@ -265,7 +265,8 @@
 ;(function($, window, document, undefined){
     "use strict";
 
-    function auxin_init_customizer() {
+    $(function () {
+        
         var isWidgetsPage = $('body').hasClass( 'widgets-php' );
 
         ////// init plugins //////////////////////////////////////////////////
@@ -2211,15 +2212,7 @@
                 return true;
             });
         })(jQuery);
-    }
-
-    if (wp.customize) {
-        auxin_init_customizer();
-    } else {
-        $(function(){
-            auxin_init_customizer();
-        });
-    }
+    });
 
 })(jQuery, window, document);
 

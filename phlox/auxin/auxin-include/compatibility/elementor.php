@@ -137,6 +137,29 @@ function auxin_editor_section_page_template( $classes ) {
  * @return void
  */
 function auxin_elementor_frontend_before_enqueue_styles(){
-    wp_enqueue_style('auxin-elementor-base' , THEME_URL . 'css/other/elementor.css' , array(), THEME_VERSION );
+    if ( auxin_is_true( auxin_get_option( 'site_override_elementor_max_width_layout', true ) ) ) {
+        wp_enqueue_style('auxin-elementor-base' , THEME_URL . 'css/other/elementor.css' , array(), THEME_VERSION );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'auxin_elementor_frontend_before_enqueue_styles', 19);
+
+/**
+ * Add notice that container widget max-width can control through the customizer
+ * 
+ * @param mixed $element
+ * @param mixed $args
+ * 
+ */
+function auxin_add_container_size_notice( $element, $args) {
+    $element->add_control(
+        'aux_container_width_notice',
+        [
+            'type' => \Elementor\Controls_Manager::NOTICE,
+            'notice_type' => 'info',
+            'dismissible' => true,
+            'heading' => esc_html__( 'Container Width', 'phlox' ),
+            'content' => esc_html__( "The container's max width is affected by the site’s max width in 'General > Layout' of the customizer. To override site max-width by elementor, switch off the 'Override elementor container size' option in the same tab in customizer.", 'phlox' ),
+        ]
+    );
+}
+add_action( 'elementor/element/container/section_layout_container/after_section_start', 'auxin_add_container_size_notice', 10, 2 );

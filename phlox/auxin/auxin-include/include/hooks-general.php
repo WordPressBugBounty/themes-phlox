@@ -1041,7 +1041,7 @@ function auxin_add_goto_top_btn(){
 
 
 
-    $goto_top = '<div class="aux-goto-top-btn aux-align-btn-'. esc_attr( $page_goto_top_alignment ) .'" data-animate-scroll="'. esc_attr( auxin_get_option('goto_top_animate') ) .'">'.
+    $goto_top = '<div class="aux-goto-top-btn aux-align-btn-'. esc_attr( $page_goto_top_alignment ) .'">'.
         '<div class="aux-hover-slide aux-arrow-nav aux-round aux-outline">'.
         '    <span class="aux-overlay"></span>'.
         '    <span class="aux-svg-arrow aux-h-small-up"></span>'.

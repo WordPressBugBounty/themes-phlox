@@ -97,6 +97,16 @@ function auxin_define_options_info( $fields_sections_list ){
         'default'   => 's-fhd'
     );
 
+    $options[] = array(
+        'title'       => __( 'Override elementor container size', 'phlox' ),
+        'description' => __( 'Enable this option so that customizer max-width option override elementor settings.', 'phlox' ),
+        'id'          => 'site_override_elementor_max_width_layout',
+        'section'     => 'general-section-layout',
+        'default'     => '1',
+        'type'        => 'switch',
+        'transport'   => 'refresh'
+    );
+
     // Sub section - General Typography -------------------------------
 
     $sections[] = array(
@@ -11258,22 +11268,6 @@ function auxin_define_options_info( $fields_sections_list ){
         'type'      => 'switch'
     );
 
-    $options[] = array(
-        'title'       => __( 'Animate scroll', 'phlox' ),
-        'description' => __( 'Specifies whether animate or instantly go to top of page, when goto top button clicks.', 'phlox' ),
-        'id'          => 'goto_top_animate',
-        'section'     => 'tools-section-goto-top',
-        'dependency'  => array(
-            array(
-                'id' => 'show_goto_top_btn',
-                'value' => array( '1' )
-            )
-        ),
-        'transport' => 'postMessage',
-        'post_js'   => '$(".aux-goto-top-btn").data( "animate-scroll", to );',
-        'default'   => '1',
-        'type'      => 'switch'
-    );
 
 
     $options[] = array(
