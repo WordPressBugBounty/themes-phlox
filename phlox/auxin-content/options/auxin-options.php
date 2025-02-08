@@ -4,7 +4,7 @@
  *
  * 
  * @package    Auxin
- * @author     averta (c) 2014-2024
+ * @author     averta (c) 2014-2025
  * @link       http://averta.net
  */
 
@@ -500,22 +500,22 @@ function auxin_define_options_info( $fields_sections_list ){
         $default_colors = [
             [
                 '_id' => 'primary',
-                'title' => __( 'Primary', 'elementor' ),
+                'title' => __( 'Primary', 'phlox' ),
                 'color' => '#6EC1E4',
             ],
             [
                 '_id' => 'secondary',
-                'title' => __( 'Secondary', 'elementor' ),
+                'title' => __( 'Secondary', 'phlox' ),
                 'color' => '#54595F',
             ],
             [
                 '_id' => 'text',
-                'title' => __( 'Text', 'elementor' ),
+                'title' => __( 'Text', 'phlox' ),
                 'color' => '#7A7A7A',
             ],
             [
                 '_id' => 'accent',
-                'title' => __( 'Accent', 'elementor' ),
+                'title' => __( 'Accent', 'phlox' ),
                 'color' => '#61CE70',
             ],
         ];

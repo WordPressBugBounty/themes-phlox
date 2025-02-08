@@ -1,13 +1,13 @@
-# Averta Copyright (c) {2024}
+# Averta Copyright (c) {2025}
 msgid ""
 msgstr ""
-"Project-Id-Version: Phlox 2.17.0\n"
+"Project-Id-Version: Phlox 2.17.3\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2024-12-17 06:58:00+00:00\n"
+"POT-Creation-Date: 2025-02-06 07:45:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Averta <info@averta.net>\n"
 "Language-Team: Averta <info@averta.net>\n"
 "Language: en\n"
@@ -2334,8 +2334,8 @@ msgid "Phlox Core Plugin"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-admin.php:181
-#: auxin-content/include/hooks-admin.php:100
-#: auxin-content/include/hooks-admin.php:123
+#: auxin-content/include/hooks-admin.php:97
+#: auxin-content/include/hooks-admin.php:120
 #: build/phlox/auxin/auxin-include/include/hooks-admin.php:125
 #: build/phlox/auxin-content/include/hooks-admin.php:45
 #: build/phlox-pro/auxin/auxin-include/include/hooks-admin.php:174
@@ -2478,166 +2478,166 @@ msgstr ""
 msgid "Footer Social Menu"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1139
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1110
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1110
+#: auxin/auxin-include/include/hooks-general.php:1137
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1108
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1108
 msgid "Likes"
+msgstr ""
+
+#: auxin/auxin-include/include/hooks-general.php:1160
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1131
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1131
+msgid "Global Primary Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1162
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1133
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1133
-msgid "Global Primary Widget Area"
+msgid "It is accessible everywhere on primary sidebars."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1164
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1135
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1135
-msgid "It is accessible everywhere on primary sidebars."
+#: auxin/auxin-include/include/hooks-general.php:1170
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1141
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1141
+msgid "Global Secondary Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1172
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1143
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1143
-msgid "Global Secondary Widget Area"
+msgid "It is accessible everywhere on secondary sidebars."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1174
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1145
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1145
-msgid "It is accessible everywhere on secondary sidebars."
+#: auxin/auxin-include/include/hooks-general.php:1181
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1152
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1152
+msgid "Shop Sidebar Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1183
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1154
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1154
-msgid "Shop Sidebar Widget Area"
+msgid "It is accessible on shop page sidebar."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1185
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1156
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1156
-msgid "It is accessible on shop page sidebar."
+#: auxin/auxin-include/include/hooks-general.php:1192
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1163
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1163
+msgid "Pages Primary Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1194
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1165
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1165
-msgid "Pages Primary Widget Area"
+msgid "It is accessible on primary sidebars except the blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1196
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1167
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1167
-msgid "It is accessible on primary sidebars except the blog pages."
+#: auxin/auxin-include/include/hooks-general.php:1202
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1173
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1173
+msgid "Pages Secondary Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1204
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1175
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1175
-msgid "Pages Secondary Widget Area"
+msgid "It is accessible on secondary sidebars except the blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1206
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1177
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1177
-msgid "It is accessible on secondary sidebars except the blog pages."
+#: auxin/auxin-include/include/hooks-general.php:1212
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1183
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1183
+msgid "Blog Primary Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1214
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1185
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1185
-msgid "Blog Primary Widget Area"
+msgid "It is accessible only on primary sidebars in blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1216
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1187
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1187
-msgid "It is accessible only on primary sidebars in blog pages."
+#: auxin/auxin-include/include/hooks-general.php:1222
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1193
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1193
+msgid "Blog Secondary Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1224
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1195
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1195
-msgid "Blog Secondary Widget Area"
+msgid "It is accessible only on secondary sidebars in blog pages."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1226
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1197
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1197
-msgid "It is accessible only on secondary sidebars in blog pages."
+#: auxin/auxin-include/include/hooks-general.php:1232
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1203
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1203
+msgid "Search Result Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1234
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1205
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1205
-msgid "Search Result Widget Area"
+msgid "It is accessible only on primary sidebars in search result page."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1236
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1207
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1207
-msgid "It is accessible only on primary sidebars in search result page."
+#: auxin/auxin-include/include/hooks-general.php:1244
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1215
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1215
+msgid "Subfooter Bar Widget Area"
 msgstr ""
 
 #: auxin/auxin-include/include/hooks-general.php:1246
 #: build/phlox/auxin/auxin-include/include/hooks-general.php:1217
 #: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1217
-msgid "Subfooter Bar Widget Area"
-msgstr ""
-
-#: auxin/auxin-include/include/hooks-general.php:1248
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1219
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1219
 msgid ""
 "The widget area above the subfooter section. Perfect for placing the "
 "\"Newsletter\", \"Social icons\" or \"Instagram\" widget."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1268
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1239
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1239
+#: auxin/auxin-include/include/hooks-general.php:1266
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1237
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1237
 msgid "Subfooter %s Widget Area"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1270
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1241
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1241
+#: auxin/auxin-include/include/hooks-general.php:1268
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1239
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1239
 msgid "The %s column in subfooter section."
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1321
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1292
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1292
+#: auxin/auxin-include/include/hooks-general.php:1319
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1290
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1290
 msgid "Post Options"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1329
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1300
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1300
+#: auxin/auxin-include/include/hooks-general.php:1327
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1298
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1298
 msgid "Page Options"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1373
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1344
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1344
+#: auxin/auxin-include/include/hooks-general.php:1371
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1342
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1342
 msgid "Loading"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1577
+#: auxin/auxin-include/include/hooks-general.php:1575
 #: auxin-content/options/auxin-options.php:1255
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1548
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1546
 #: build/phlox/auxin-content/options/auxin-options.php:1192
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1548
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1546
 #: build/phlox-pro/auxin-content/options/auxin-options.php:1192
 msgid "Add a Comment"
 msgstr ""
 
-#: auxin/auxin-include/include/hooks-general.php:1578
+#: auxin/auxin-include/include/hooks-general.php:1576
 #: auxin-content/options/auxin-options.php:1276
-#: build/phlox/auxin/auxin-include/include/hooks-general.php:1549
+#: build/phlox/auxin/auxin-include/include/hooks-general.php:1547
 #: build/phlox/auxin-content/options/auxin-options.php:1213
-#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1549
+#: build/phlox-pro/auxin/auxin-include/include/hooks-general.php:1547
 #: build/phlox-pro/auxin-content/options/auxin-options.php:1213
 msgid "Your email address will not be published. Required fields are marked *"
 msgstr ""
@@ -2918,7 +2918,7 @@ msgid "Install Required Plugins"
 msgstr ""
 
 #: auxin/auxin-include/modules/lib/class-tgm-plugin-activation.php:328
-#: auxin-content/include/hooks-admin.php:539
+#: auxin-content/include/hooks-admin.php:533
 #: build/phlox/auxin/auxin-include/modules/lib/class-tgm-plugin-activation.php:328
 #: build/phlox/auxin-content/include/hooks-admin.php:269
 #: build/phlox-pro/auxin/auxin-include/modules/lib/class-tgm-plugin-activation.php:328
@@ -3106,7 +3106,7 @@ msgid "Required"
 msgstr ""
 
 #: auxin/auxin-include/modules/lib/class-tgm-plugin-activation.php:2278
-#: auxin-content/include/hooks-admin.php:550
+#: auxin-content/include/hooks-admin.php:544
 #: build/phlox/auxin/auxin-include/modules/lib/class-tgm-plugin-activation.php:2274
 #: build/phlox/auxin-content/include/hooks-admin.php:280
 #: build/phlox-pro/auxin/auxin-include/modules/lib/class-tgm-plugin-activation.php:2274
@@ -5744,19 +5744,42 @@ msgid "Select a template"
 msgstr ""
 
 #: auxin-content/include/hooks-admin.php:83
-#: auxin-content/include/hooks-admin.php:140
+#: auxin-content/include/hooks-admin.php:137
 #: build/phlox/auxin-content/include/hooks-admin.php:31
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:56
 msgid "Phlox Core Elements"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:87
+#: auxin-content/include/hooks-admin.php:90
 #: auxin-content/include/hooks-admin.php:144
-#: auxin-content/include/hooks-admin.php:153
-#: auxin-content/include/hooks-admin.php:164
+#: build/phlox/auxin-content/include/hooks-admin.php:38
+#: build/phlox-pro/auxin-content/include/hooks-admin.php:63
+msgid "Phlox Portfolio"
+msgstr ""
+
+#: auxin-content/include/hooks-admin.php:104
 #: auxin-content/include/hooks-admin.php:175
-#: auxin-content/include/hooks-admin.php:193
-#: auxin-content/include/hooks-admin.php:212
+#: build/phlox/auxin-content/include/hooks-admin.php:52
+#: build/phlox-pro/auxin-content/include/hooks-admin.php:94
+msgid "WooCommerce"
+msgstr ""
+
+#: auxin-content/include/hooks-admin.php:112
+#: build/phlox/auxin-content/include/hooks-admin.php:59
+#: build/phlox-pro/auxin-content/include/hooks-admin.php:32
+msgid "Depicter"
+msgstr ""
+
+#: auxin-content/include/hooks-admin.php:127
+#: build/phlox-pro/auxin-content/include/hooks-admin.php:46
+msgid "Elementor Element Pack"
+msgstr ""
+
+#: auxin-content/include/hooks-admin.php:147
+#: auxin-content/include/hooks-admin.php:158
+#: auxin-content/include/hooks-admin.php:169
+#: auxin-content/include/hooks-admin.php:187
+#: auxin-content/include/hooks-admin.php:206
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:66
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:77
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:88
@@ -5765,277 +5788,252 @@ msgstr ""
 msgid "Exclusive"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:93
-#: auxin-content/include/hooks-admin.php:150
-#: build/phlox/auxin-content/include/hooks-admin.php:38
-#: build/phlox-pro/auxin-content/include/hooks-admin.php:63
-msgid "Phlox Portfolio"
-msgstr ""
-
-#: auxin-content/include/hooks-admin.php:107
-#: auxin-content/include/hooks-admin.php:181
-#: build/phlox/auxin-content/include/hooks-admin.php:52
-#: build/phlox-pro/auxin-content/include/hooks-admin.php:94
-msgid "WooCommerce"
-msgstr ""
-
-#: auxin-content/include/hooks-admin.php:115
-#: build/phlox/auxin-content/include/hooks-admin.php:59
-#: build/phlox-pro/auxin-content/include/hooks-admin.php:32
-msgid "Depicter"
-msgstr ""
-
-#: auxin-content/include/hooks-admin.php:130
-#: build/phlox-pro/auxin-content/include/hooks-admin.php:46
-msgid "Elementor Element Pack"
-msgstr ""
-
-#: auxin-content/include/hooks-admin.php:159
+#: auxin-content/include/hooks-admin.php:153
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:72
 msgid "Phlox Pro Features"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:170
+#: auxin-content/include/hooks-admin.php:164
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:83
 msgid "Phlox News"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:188
+#: auxin-content/include/hooks-admin.php:182
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:101
 msgid "Phlox Shop"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:199
+#: auxin-content/include/hooks-admin.php:193
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:112
 msgid "TI Woocommerce Wishlist"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:207
+#: auxin-content/include/hooks-admin.php:201
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:120
 msgid "Master Slider Pro"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:218
+#: auxin-content/include/hooks-admin.php:212
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:131
 msgid "Visual Composer Page Builder"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:228
-#: auxin-content/include/hooks-admin.php:332
+#: auxin-content/include/hooks-admin.php:222
+#: auxin-content/include/hooks-admin.php:326
 #: build/phlox/auxin-content/include/hooks-admin.php:67
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:141
 msgid "HubSpot"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:235
-#: auxin-content/include/hooks-admin.php:339
+#: auxin-content/include/hooks-admin.php:229
+#: auxin-content/include/hooks-admin.php:333
 #: build/phlox/auxin-content/include/hooks-admin.php:74
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:148
 msgid "SellKit"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:243
-#: auxin-content/include/hooks-admin.php:347
+#: auxin-content/include/hooks-admin.php:237
+#: auxin-content/include/hooks-admin.php:341
 #: build/phlox/auxin-content/include/hooks-admin.php:82
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:156
 msgid "WP SMS"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:250
+#: auxin-content/include/hooks-admin.php:244
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:163
 msgid "Ultimate VC Addons"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:260
+#: auxin-content/include/hooks-admin.php:254
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:173
 msgid "Visual CSS Style Editor: Yellow Pencil"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:270
+#: auxin-content/include/hooks-admin.php:264
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:183
 msgid "Revolution Slider"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:280
+#: auxin-content/include/hooks-admin.php:274
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:193
 msgid "LayerSlider"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:290
+#: auxin-content/include/hooks-admin.php:284
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:203
 msgid "Go Pricing Tables"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:300
+#: auxin-content/include/hooks-admin.php:294
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:213
 msgid "Convert Plus"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:310
+#: auxin-content/include/hooks-admin.php:304
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:223
 msgid "ZoomSounds - Audio Player"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:320
+#: auxin-content/include/hooks-admin.php:314
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:233
 msgid "Auto Theme Updater"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:355
+#: auxin-content/include/hooks-admin.php:349
 #: build/phlox/auxin-content/include/hooks-admin.php:89
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:244
 msgid "Instagram Feed"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:362
+#: auxin-content/include/hooks-admin.php:356
 #: build/phlox/auxin-content/include/hooks-admin.php:96
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:251
 msgid "WordPress SEO"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:369
+#: auxin-content/include/hooks-admin.php:363
 #: build/phlox/auxin-content/include/hooks-admin.php:103
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:258
 msgid "Recent Tweets Widget"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:376
+#: auxin-content/include/hooks-admin.php:370
 #: build/phlox/auxin-content/include/hooks-admin.php:110
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:265
 msgid "Contact Form 7"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:383
+#: auxin-content/include/hooks-admin.php:377
 #: build/phlox/auxin-content/include/hooks-admin.php:117
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:272
 msgid "Variation Swatches for WooCommerce"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:390
+#: auxin-content/include/hooks-admin.php:384
 #: build/phlox/auxin-content/include/hooks-admin.php:124
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:279
 msgid "WordPress Importer"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:398
+#: auxin-content/include/hooks-admin.php:392
 #: build/phlox/auxin-content/include/hooks-admin.php:132
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:287
 msgid "Related Posts for WordPress"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:405
+#: auxin-content/include/hooks-admin.php:399
 #: build/phlox/auxin-content/include/hooks-admin.php:139
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:294
 msgid "WP ULike"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:412
+#: auxin-content/include/hooks-admin.php:406
 #: build/phlox/auxin-content/include/hooks-admin.php:146
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:301
 msgid "Autoptimize"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:419
+#: auxin-content/include/hooks-admin.php:413
 #: build/phlox/auxin-content/include/hooks-admin.php:153
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:308
 msgid "Custom Facebook Feed"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:427
+#: auxin-content/include/hooks-admin.php:421
 #: build/phlox/auxin-content/include/hooks-admin.php:161
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:316
 msgid "Flickr Justified Gallery"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:435
+#: auxin-content/include/hooks-admin.php:429
 #: build/phlox/auxin-content/include/hooks-admin.php:169
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:324
 msgid "Image Optimization"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:443
+#: auxin-content/include/hooks-admin.php:437
 #: build/phlox/auxin-content/include/hooks-admin.php:177
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:332
 msgid "Export/Import Theme Options"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:451
+#: auxin-content/include/hooks-admin.php:445
 #: build/phlox/auxin-content/include/hooks-admin.php:185
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:340
 msgid "Popular Posts"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:459
+#: auxin-content/include/hooks-admin.php:453
 #: build/phlox/auxin-content/include/hooks-admin.php:192
 msgid "Visual CSS Style Editor"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:467
+#: auxin-content/include/hooks-admin.php:461
 #: build/phlox/auxin-content/include/hooks-admin.php:199
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:348
 msgid "EU Cookie Notce"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:474
+#: auxin-content/include/hooks-admin.php:468
 #: build/phlox/auxin-content/include/hooks-admin.php:206
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:355
 msgid "MailChimp for WordPress"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:481
+#: auxin-content/include/hooks-admin.php:475
 #: build/phlox/auxin-content/include/hooks-admin.php:213
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:362
 msgid "Real-time Bitcoin Converter"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:488
+#: auxin-content/include/hooks-admin.php:482
 #: build/phlox/auxin-content/include/hooks-admin.php:220
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:369
 msgid "Custom Sidebars"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:495
+#: auxin-content/include/hooks-admin.php:489
 #: build/phlox/auxin-content/include/hooks-admin.php:227
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:376
 msgid "Simple Taxonomy Ordering"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:508
+#: auxin-content/include/hooks-admin.php:502
 #: build/phlox/auxin-content/include/hooks-admin.php:239
 msgid "MasterSlider by averta"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:538
+#: auxin-content/include/hooks-admin.php:532
 #: build/phlox/auxin-content/include/hooks-admin.php:268
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:405
 msgid "Install Recommended Plugins"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:551
+#: auxin-content/include/hooks-admin.php:545
 #: build/phlox/auxin-content/include/hooks-admin.php:281
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:418
 msgid "Essentials"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:552
+#: auxin-content/include/hooks-admin.php:546
 #: build/phlox/auxin-content/include/hooks-admin.php:282
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:419
 msgid "Bundled"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:553
+#: auxin-content/include/hooks-admin.php:547
 #: build/phlox/auxin-content/include/hooks-admin.php:283
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:420
 msgid "Visual Builder"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:554
+#: auxin-content/include/hooks-admin.php:548
 #: build/phlox/auxin-content/include/hooks-admin.php:284
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:421
 msgid "E-Commerce"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:555
+#: auxin-content/include/hooks-admin.php:549
 #: auxin-content/options/auxin-options.php:4482
 #: build/phlox/auxin-content/include/hooks-admin.php:285
 #: build/phlox/auxin-content/options/auxin-options.php:4209
@@ -6044,74 +6042,74 @@ msgstr ""
 msgid "Blog"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:556
+#: auxin-content/include/hooks-admin.php:550
 #: build/phlox/auxin-content/include/hooks-admin.php:286
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:423
 msgid "Social"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:557
+#: auxin-content/include/hooks-admin.php:551
 #: build/phlox/auxin-content/include/hooks-admin.php:287
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:424
 msgid "Optimization"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:574
+#: auxin-content/include/hooks-admin.php:568
 #: build/phlox/auxin-content/include/hooks-admin.php:304
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:441
 msgid "Import Demo"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:575
+#: auxin-content/include/hooks-admin.php:569
 #: build/phlox/auxin-content/include/hooks-admin.php:305
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:442
 msgid "Clone a demo site in few clicks"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:576
+#: auxin-content/include/hooks-admin.php:570
 #: build/phlox/auxin-content/include/hooks-admin.php:306
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:443
 msgid "Run Importer"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:581
+#: auxin-content/include/hooks-admin.php:575
 #: build/phlox/auxin-content/include/hooks-admin.php:311
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:448
 msgid "Customize %s"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:582
+#: auxin-content/include/hooks-admin.php:576
 #: build/phlox/auxin-content/include/hooks-admin.php:312
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:449
 msgid "Customize any part of your website."
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:583
+#: auxin-content/include/hooks-admin.php:577
 #: build/phlox/auxin-content/include/hooks-admin.php:313
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:450
 msgid "Customize"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:597
+#: auxin-content/include/hooks-admin.php:591
 #: build/phlox/auxin-content/include/hooks-admin.php:327
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:464
 msgid "Need Some Help?"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:598
+#: auxin-content/include/hooks-admin.php:592
 #: build/phlox/auxin-content/include/hooks-admin.php:328
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:465
 msgid "We would love to be of any assistance."
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:599
+#: auxin-content/include/hooks-admin.php:593
 #: build/phlox/auxin-content/include/hooks-admin.php:329
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:466
 msgid "Send Ticket"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:605
-#: auxin-content/include/hooks-admin.php:742
+#: auxin-content/include/hooks-admin.php:599
+#: auxin-content/include/hooks-admin.php:736
 #: build/phlox/auxin-content/include/hooks-admin.php:335
 #: build/phlox/auxin-content/include/hooks-admin.php:472
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:472
@@ -6119,68 +6117,68 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:606
+#: auxin-content/include/hooks-admin.php:600
 #: build/phlox/auxin-content/include/hooks-admin.php:336
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:473
 msgid "Learn about any aspect of %s Theme."
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:607
+#: auxin-content/include/hooks-admin.php:601
 #: build/phlox/auxin-content/include/hooks-admin.php:337
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:474
 msgid "Start Reading"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:613
+#: auxin-content/include/hooks-admin.php:607
 #: build/phlox/auxin-content/include/hooks-admin.php:343
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:480
 msgid "Subscription"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:614
+#: auxin-content/include/hooks-admin.php:608
 #: build/phlox/auxin-content/include/hooks-admin.php:344
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:481
 msgid "Get the latest changes in your inbox."
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:615
+#: auxin-content/include/hooks-admin.php:609
 #: build/phlox/auxin-content/include/hooks-admin.php:345
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:482
 msgid "Coming soon"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:625
+#: auxin-content/include/hooks-admin.php:619
 #: build/phlox/auxin-content/include/hooks-admin.php:355
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:492
 msgid "Dashboard"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:643
+#: auxin-content/include/hooks-admin.php:637
 #: build/phlox/auxin-content/include/hooks-admin.php:373
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:510
 msgid "Customization"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:735
+#: auxin-content/include/hooks-admin.php:729
 #: build/phlox/auxin-content/include/hooks-admin.php:465
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:602
 msgid "Play all video tutorials"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:737
+#: auxin-content/include/hooks-admin.php:731
 #: build/phlox/auxin-content/include/hooks-admin.php:467
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:604
 msgid "Video Tutorials"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:738
+#: auxin-content/include/hooks-admin.php:732
 #: build/phlox/auxin-content/include/hooks-admin.php:468
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:605
 msgid "Take your skills with %s to the next level!"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:743
-#: auxin-content/include/hooks-admin.php:748
+#: auxin-content/include/hooks-admin.php:737
+#: auxin-content/include/hooks-admin.php:742
 #: build/phlox/auxin-content/include/hooks-admin.php:473
 #: build/phlox/auxin-content/include/hooks-admin.php:478
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:610
@@ -6188,31 +6186,31 @@ msgstr ""
 msgid "Check out"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:747
+#: auxin-content/include/hooks-admin.php:741
 #: build/phlox/auxin-content/include/hooks-admin.php:477
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:614
 msgid "Support Center"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:758
+#: auxin-content/include/hooks-admin.php:752
 #: build/phlox/auxin-content/include/hooks-admin.php:488
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:625
 msgid "Tutorials"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:777
+#: auxin-content/include/hooks-admin.php:771
 #: build/phlox/auxin-content/include/hooks-admin.php:507
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:644
 msgid "Please install \"Phlox Core Elements\" plugin to enable this feature."
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:786
+#: auxin-content/include/hooks-admin.php:780
 #: build/phlox/auxin-content/include/hooks-admin.php:516
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:653
 msgid "Demo Importer"
 msgstr ""
 
-#: auxin-content/include/hooks-admin.php:815
+#: auxin-content/include/hooks-admin.php:809
 #: build/phlox/auxin-content/include/hooks-admin.php:545
 #: build/phlox-pro/auxin-content/include/hooks-admin.php:682
 msgid ""
