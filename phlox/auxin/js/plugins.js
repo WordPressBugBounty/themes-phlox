@@ -1,4 +1,4 @@
-/*! Auxin WordPress Framework - v2.17.3 (2025-02-06)
+/*! Auxin WordPress Framework - v2.17.4 (2025-02-15)
  *  All required javascript plugins for admin 
  *  http://averta.net
  *  Place any jQuery/helper plugins in here, instead of separate, slower script files!

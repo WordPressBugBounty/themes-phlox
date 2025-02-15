@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Phlox Pro\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2025-02-06 07:45:59+00:00\n"
+"POT-Creation-Date: 2025-02-15 07:58:00+00:00\n"
 "PO-Revision-Date: 2019-08-04 03:37+0430\n"
 "Last-Translator: test <monsterwordpress@gmail.com>\n"
 "Language-Team: WPMonster.co\n"
@@ -704,30 +704,15 @@ msgstr ""
 msgid "Add Global Color"
 msgstr "الگوی وسط"
 
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:81
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:84
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:84
-msgid "Press return or enter to open this section"
-msgstr "برای باز کردن این بخش دکمه بازگشت را فشار دهید"
-
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:83
-#: auxin/auxin-include/classes/class-auxin-metabox-hub.php:131
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:86
-#: build/phlox/auxin/auxin-include/classes/class-auxin-metabox-hub.php:134
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:86
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-metabox-hub.php:134
-msgid "Deprecated"
-msgstr ""
-
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:91
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:94
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:94
+#: auxin/auxin-include/classes/class-auxin-customize-section.php:87
+#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:90
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:90
 msgid "Back"
 msgstr "بازگشت"
 
-#: auxin/auxin-include/classes/class-auxin-customize-section.php:100
-#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:103
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:103
+#: auxin/auxin-include/classes/class-auxin-customize-section.php:96
+#: build/phlox/auxin/auxin-include/classes/class-auxin-customize-section.php:99
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-section.php:99
 msgid "Help"
 msgstr "کمک"
 
@@ -1021,6 +1006,12 @@ msgstr "شناسه تصویر"
 #: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:154
 #: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:154
 msgid "Link/anchor ID"
+msgstr ""
+
+#: auxin/auxin-include/classes/class-auxin-metabox-hub.php:131
+#: build/phlox/auxin/auxin-include/classes/class-auxin-metabox-hub.php:134
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-metabox-hub.php:134
+msgid "Deprecated"
 msgstr ""
 
 #: auxin/auxin-include/classes/class-auxin-metabox-hub.php:148
@@ -12301,6 +12292,9 @@ msgstr[0] "همه <span class=\"count\">(%s)</span>"
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr "ناشناخته"
+
+#~ msgid "Press return or enter to open this section"
+#~ msgstr "برای باز کردن این بخش دکمه بازگشت را فشار دهید"
 
 #~ msgid "Blog Category & tag"
 #~ msgstr "دسته بندی و برچسب وبلاگ"
