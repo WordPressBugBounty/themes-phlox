@@ -63,11 +63,18 @@ class Auxin_Breadcrumb {
 
         $crumbs  =  $this->wrapper_start_tag;
         if ( empty( $this->home_icon ) ) {
-            $crumbs .=  $this->create_crumb( esc_html_x( 'Home', 'Home in breadcrumb' , 'phlox'), home_url(), null );
+            $crumbs .=  $this->create_crumb( esc_html_x( 'Home', 'Home in breadcrumb' , 'phlox'), esc_url( home_url() ), null );
         } else {
-            $crumbs .=  "<a href='" . home_url() . "'><span class='aux-breadcrumb-home " . $this->home_icon . "'></span></a>";
+            if ( is_array( $this->home_icon ) && ! empty( $this->home_icon['value'] ) && class_exists( '\Elementor\Icons_Manager' ) ) {
+                $crumbs .= \Elementor\Icons_Manager::try_get_icon_html( $this->home_icon, [
+                    'aria-hidden' => 'true' ,
+                    'class' => "aux-breadcrumb-sep"
+                ] );
+            } else {
+                $crumbs .=  "<a href='" . esc_url( home_url() ) . "'><span class='aux-breadcrumb-home " . esc_attr( $this->home_icon ) . "'></span></a>";
+            }
         }
-        
+
 
         //if it is page
         if( is_page() ) {
@@ -202,7 +209,7 @@ class Auxin_Breadcrumb {
     public function create_crumb( $title = '', $link = '', $sep = '' ){
         if( $title ) {
 
-            $sep = ! $sep ? $this->sep : $sep;
+            $sep = is_null( $sep ) ? '' : ( !$sep ? $this->sep : $sep );
             $crumb_max_length = auxin_get_option( 'breadcrumbs_text_max_length', 30 );
             $crumb_max_length =  empty( $crumb_max_length ) ? '' : $crumb_max_length ;
             $trimmed_title = esc_html( auxin_get_trimmed_string( $title, $crumb_max_length, "..." ) );
@@ -281,7 +288,14 @@ class Auxin_Breadcrumb {
         // 'gt' is previous default value which will be converted to default icon
         $icon_class = ! empty( $icon_class ) && ( 'gt' !== $icon_class ) ? $icon_class : 'auxicon-chevron-right-1';
 
-        $this->sep = '<span class="aux-breadcrumb-sep breadcrumb-icon '. esc_attr( $icon_class ) .'"></span>';
+        if ( is_array( $icon_class ) && ! empty( $icon_class['value'] ) && class_exists( '\Elementor\Icons_Manager' ) ) {
+            $this->sep = \Elementor\Icons_Manager::try_get_icon_html( $icon_class, [
+                'aria-hidden' => 'true' ,
+                'class' => "aux-breadcrumb-sep"
+            ] );
+        } else {
+            $this->sep = '<span class="aux-breadcrumb-sep breadcrumb-icon '. esc_attr( $icon_class ) .'"></span>';
+        }
     }
 
 

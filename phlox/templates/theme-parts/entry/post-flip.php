@@ -86,7 +86,16 @@
                         echo '<a href="'. esc_url( $the_link ) .'" class="link-format-excerpt">' . $the_link . '</a>';
 
                     } elseif ( has_excerpt() ) { ?>
-                        <p><?php the_excerpt() ;?></p><?php
+                        <p>
+                        <?php 
+                        if ( !empty( $excerpt_length ) ) {
+                            $excerpt = get_the_excerpt() ;
+                            auxin_the_trimmed_string( $excerpt, (int) $excerpt_len, null, true );
+                        } else {
+                            the_excerpt();
+                        }
+                        ?>
+                        </p><?php
                     } else { ?>
                         <p><?php auxin_the_trim_excerpt( null, (int) $excerpt_len, null, true ); ?></p><?php
 

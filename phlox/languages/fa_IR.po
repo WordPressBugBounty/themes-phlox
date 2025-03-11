@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Phlox Pro\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2025-02-15 07:58:00+00:00\n"
+"POT-Creation-Date: 2025-03-01 06:43:16+00:00\n"
 "PO-Revision-Date: 2019-08-04 03:37+0430\n"
 "Last-Translator: test <monsterwordpress@gmail.com>\n"
 "Language-Team: WPMonster.co\n"
@@ -170,9 +170,9 @@ msgstr "در حال نصب"
 msgid "Activated"
 msgstr "فعال شده"
 
-#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:125
-#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:128
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:128
+#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:132
+#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:135
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:135
 msgid "show all"
 msgstr "نمایش همه"
 
@@ -2788,21 +2788,21 @@ msgstr "در تاریخ"
 #: build/phlox/templates/theme-parts/entry/post-column.php:65
 #: build/phlox/templates/theme-parts/entry/post-column.php:120
 #: build/phlox/templates/theme-parts/entry/post-flip.php:39
-#: build/phlox/templates/theme-parts/entry/post-flip.php:108
+#: build/phlox/templates/theme-parts/entry/post-flip.php:117
 #: build/phlox/templates/theme-parts/entry/post.php:78
 #: build/phlox/templates/theme-parts/entry/single-post.php:87
 #: build/phlox-pro/auxin/auxin-include/include/templates/templates-header.php:505
 #: build/phlox-pro/templates/theme-parts/entry/post-column.php:65
 #: build/phlox-pro/templates/theme-parts/entry/post-column.php:120
 #: build/phlox-pro/templates/theme-parts/entry/post-flip.php:39
-#: build/phlox-pro/templates/theme-parts/entry/post-flip.php:108
+#: build/phlox-pro/templates/theme-parts/entry/post-flip.php:117
 #: build/phlox-pro/templates/theme-parts/entry/post.php:78
 #: build/phlox-pro/templates/theme-parts/entry/single-post.php:87
 #: templates/theme-parts/entry/exclude/single-news.php:39
 #: templates/theme-parts/entry/post-column.php:65
 #: templates/theme-parts/entry/post-column.php:120
 #: templates/theme-parts/entry/post-flip.php:39
-#: templates/theme-parts/entry/post-flip.php:108
+#: templates/theme-parts/entry/post-flip.php:117
 #: templates/theme-parts/entry/post.php:78
 #: templates/theme-parts/entry/single-post.php:87
 msgid "by"
@@ -2813,7 +2813,7 @@ msgstr "توسط"
 #: build/phlox/templates/theme-parts/entry/post-column.php:67
 #: build/phlox/templates/theme-parts/entry/post-column.php:121
 #: build/phlox/templates/theme-parts/entry/post-flip.php:41
-#: build/phlox/templates/theme-parts/entry/post-flip.php:109
+#: build/phlox/templates/theme-parts/entry/post-flip.php:118
 #: build/phlox/templates/theme-parts/entry/post.php:80
 #: build/phlox/templates/theme-parts/entry/single-post.php:89
 #: build/phlox/templates/theme-parts/entry/single-post.php:214
@@ -2821,14 +2821,14 @@ msgstr "توسط"
 #: build/phlox-pro/templates/theme-parts/entry/post-column.php:67
 #: build/phlox-pro/templates/theme-parts/entry/post-column.php:121
 #: build/phlox-pro/templates/theme-parts/entry/post-flip.php:41
-#: build/phlox-pro/templates/theme-parts/entry/post-flip.php:109
+#: build/phlox-pro/templates/theme-parts/entry/post-flip.php:118
 #: build/phlox-pro/templates/theme-parts/entry/post.php:80
 #: build/phlox-pro/templates/theme-parts/entry/single-post.php:89
 #: build/phlox-pro/templates/theme-parts/entry/single-post.php:214
 #: templates/theme-parts/entry/post-column.php:67
 #: templates/theme-parts/entry/post-column.php:121
 #: templates/theme-parts/entry/post-flip.php:41
-#: templates/theme-parts/entry/post-flip.php:109
+#: templates/theme-parts/entry/post-flip.php:118
 #: templates/theme-parts/entry/post.php:80
 #: templates/theme-parts/entry/single-post.php:89
 #: templates/theme-parts/entry/single-post.php:214
@@ -11695,15 +11695,15 @@ msgid "Bring me back home"
 msgstr "برگشت به صفحه اصلی"
 
 #: build/phlox/templates/theme-parts/content.php:19
-#: build/phlox/templates/theme-parts/entry/post-land.php:87
+#: build/phlox/templates/theme-parts/entry/post-land.php:92
 #: build/phlox/templates/theme-parts/entry/post.php:133
 #: build/phlox/templates/theme-parts/entry/single-post.php:138
 #: build/phlox-pro/templates/theme-parts/content.php:19
-#: build/phlox-pro/templates/theme-parts/entry/post-land.php:87
+#: build/phlox-pro/templates/theme-parts/entry/post-land.php:92
 #: build/phlox-pro/templates/theme-parts/entry/post.php:133
 #: build/phlox-pro/templates/theme-parts/entry/single-post.php:138
 #: templates/theme-parts/content.php:19
-#: templates/theme-parts/entry/post-land.php:87
+#: templates/theme-parts/entry/post-land.php:92
 #: templates/theme-parts/entry/post.php:133
 #: templates/theme-parts/entry/single-post.php:138
 msgid "Pages:"
@@ -11736,30 +11736,30 @@ msgstr ""
 #: build/phlox/templates/theme-parts/entry/post-land.php:56
 #: build/phlox/templates/theme-parts/entry/post-tile.php:38
 #: build/phlox/templates/theme-parts/entry/post.php:95
-#: build/phlox/templates/theme-parts/entry/search.php:45
+#: build/phlox/templates/theme-parts/entry/search.php:52
 #: build/phlox/templates/theme-parts/entry/single-post.php:109
 #: build/phlox-pro/templates/theme-parts/entry/post-column.php:84
 #: build/phlox-pro/templates/theme-parts/entry/post-flip.php:60
 #: build/phlox-pro/templates/theme-parts/entry/post-land.php:56
 #: build/phlox-pro/templates/theme-parts/entry/post-tile.php:38
 #: build/phlox-pro/templates/theme-parts/entry/post.php:95
-#: build/phlox-pro/templates/theme-parts/entry/search.php:45
+#: build/phlox-pro/templates/theme-parts/entry/search.php:52
 #: build/phlox-pro/templates/theme-parts/entry/single-post.php:109
 #: templates/theme-parts/entry/post-column.php:84
 #: templates/theme-parts/entry/post-flip.php:60
 #: templates/theme-parts/entry/post-land.php:56
 #: templates/theme-parts/entry/post-tile.php:38
 #: templates/theme-parts/entry/post.php:95
-#: templates/theme-parts/entry/search.php:45
+#: templates/theme-parts/entry/search.php:52
 #: templates/theme-parts/entry/single-post.php:109
 msgid "View all posts in "
 msgstr "نمایش همه نوشته ها در"
 
-#: build/phlox/templates/theme-parts/entry/post-land.php:77
+#: build/phlox/templates/theme-parts/entry/post-land.php:82
 #: build/phlox/templates/theme-parts/entry/post.php:123
-#: build/phlox-pro/templates/theme-parts/entry/post-land.php:77
+#: build/phlox-pro/templates/theme-parts/entry/post-land.php:82
 #: build/phlox-pro/templates/theme-parts/entry/post.php:123
-#: templates/theme-parts/entry/post-land.php:77
+#: templates/theme-parts/entry/post-land.php:82
 #: templates/theme-parts/entry/post.php:123
 msgid "Continue Reading"
 msgstr "ادامه خواندن"
@@ -12004,25 +12004,25 @@ msgctxt "Home in breadcrumb"
 msgid "Home"
 msgstr "صفحه اصلی"
 
-#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:107
-#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:110
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:110
+#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:114
+#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:117
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:117
 #, fuzzy
 msgctxt "The blog title in breadcrumb"
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:228
-#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:231
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:231
+#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:235
+#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:238
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:238
 #, fuzzy
 msgctxt "navigate to previous page"
 msgid "previous"
 msgstr "قبلی"
 
-#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:231
-#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:234
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:234
+#: auxin/auxin-include/classes/class-auxin-breadcrumb.php:238
+#: build/phlox/auxin/auxin-include/classes/class-auxin-breadcrumb.php:241
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-breadcrumb.php:241
 #, fuzzy
 msgctxt "navigate to next page"
 msgid "next"

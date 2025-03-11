@@ -72,7 +72,12 @@
                                         $content_listing_length = is_category() || is_tag() || is_author() ? auxin_get_option( 'post_taxonomy_archive_on_listing_length', 255 ) : auxin_get_option( 'excerpt_len', 255 );
 
                                         if( has_excerpt() ){
-                                            the_excerpt();
+                                            if ( !empty( $excerpt_length ) ) {
+                                                $excerpt = get_the_excerpt() ;
+                                                auxin_the_trimmed_string( $excerpt, (int) $excerpt_len, null, true );
+                                            } else {
+                                                the_excerpt();
+                                            }
                                         } elseif( $content_listing_type == 'full' ) {
                                             the_content( __( 'Continue Reading', 'phlox' ) );
                                         } else {

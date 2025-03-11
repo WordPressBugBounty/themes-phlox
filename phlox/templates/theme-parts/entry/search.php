@@ -28,7 +28,14 @@
                                 </div>
 
                                 <div class="entry-content">
-                                    <?php the_excerpt(); ?>
+                                    <?php 
+                                    if ( !empty( $excerpt_length ) ) {
+                                        $excerpt = get_the_excerpt() ;
+                                        auxin_the_trimmed_string( $excerpt, (int) $excerpt_len, null, true );
+                                    } else {
+                                        the_excerpt();
+                                    }
+                                    ?>
                                 </div>
 
                                 <div class="entry-info">
