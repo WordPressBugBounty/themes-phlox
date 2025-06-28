@@ -3,8 +3,8 @@ Contributors: averta, averta_support
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, custom-menu, custom-colors, editor-style, featured-images, featured-image-header, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, translation-ready, blog, e-commerce, portfolio, threaded-comments, translation-ready
 Requires PHP: 5.4
 Requires at least: 4.6
-Tested up to: 6.7.1
-Stable tag: 2.17.6
+Tested up to: 6.8.1
+Stable tag: 2.17.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,9 @@ Phlox bundles the following third-party resources:
 
 
 == Changelog ==
+
+= 2.17.7 =
+- [Fix]: Resolved a warning notice related to translation hooks in WordPress 6.8.0.
 
 = 2.17.0 =
 - [Fix]: Performance improvements applied.

@@ -57,6 +57,8 @@ if( ! class_exists( 'Auxin' ) ){
             }
             $this->define_constants();
             $this->include_files();
+
+            add_action( 'init', [ $this, 'define_i18n_constants'] );
         }
 
 
@@ -124,10 +126,8 @@ if( ! class_exists( 'Auxin' ) ){
             // Http url of admin > js folder
             $this->define( 'ADMIN_JS_URL' , AUXIN_URL. 'js/' );
 
-
             locate_template( AUXIN_CON . 'init/constant.php', true, true );
-            locate_template( AUXIN_CON . 'init/constant-i18n.php', true, true );
-
+            
             // theme name
             $theme_data = wp_get_theme();
 
@@ -174,6 +174,10 @@ if( ! class_exists( 'Auxin' ) ){
             if ( ! defined( $name ) ) {
                 define( $name, $value );
             }
+        }
+
+        public function define_i18n_constants() {
+            locate_template( AUXIN_CON . 'init/constant-i18n.php', true, true );
         }
 
 

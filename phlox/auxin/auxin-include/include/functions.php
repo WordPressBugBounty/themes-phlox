@@ -1146,7 +1146,7 @@ function auxin_the_post_thumbnail( $post_id = null, $width = null , $height = nu
         /*   Generate main image
         /*-------------------------------------*/
         // crop the main image
-        if ( auxin_is_local_url( $original_image[0] ) && strpos( $original_image[0], '.gif' ) === false ) {
+        if ( auxin_is_local_url( $original_image[0] ) && strpos( $original_image[0], '.gif' ) === false && strpos( $original_image[0], '.svg' ) === false ) {
             if( is_string( $size ) ){
                 $main_image = wp_get_attachment_image_src( $attachment_id, $size );
                 if ( $size !== 'full' && empty( $main_image['3'] ) && in_array( $size, get_intermediate_image_sizes() ) ) {
@@ -1167,7 +1167,7 @@ function auxin_the_post_thumbnail( $post_id = null, $width = null , $height = nu
 
         // image width of default image src
         $default_image_width = $original_image_width > $dimensions['width'] ? $dimensions['width'] : $original_image_width;
-        if ( empty( $default_image_width ) ) {
+        if ( empty( $default_image_width ) || strpos( $original_image[0], '.svg' ) != false ) {
             return wp_get_attachment_image( $attachment_id, 'full' );
         }
 
@@ -2893,7 +2893,12 @@ ob_start();
             }?>
             </div>
             <?php if( $args['has_submit_icon'] ){ ?>
-                <div class="aux-submit-icon-container <?php echo esc_attr( $args[ 'icon_classname' ] ); ?> ">
+                <div class="aux-submit-icon-container <?php echo is_array( $args['icon_classname'] ) ? "" : esc_attr( $args[ 'icon_classname' ] ); ?> ">
+                    <?php 
+                    if ( is_array( $args['icon_classname'] ) && class_exists('\Elementor\Icons_Manager') ) {
+                        \Elementor\Icons_Manager::render_icon( $args['icon_classname'], ['style' => 'position: absolute;'] );
+                    }
+                    ?>
                     <input type="submit" class="aux-iconic-search-submit" value="<?php esc_attr_e( 'Search', 'phlox' ); ?>" >
                 </div>
             <?php } elseif( $args['has_submit'] ){ ?>

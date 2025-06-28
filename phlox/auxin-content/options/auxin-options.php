@@ -1254,7 +1254,7 @@ function auxin_define_options_info( $fields_sections_list ){
         'section'        => 'appearance-section-forms',
         'default'        => '',
         'type'           => 'group_typography',
-        'selectors'      => '#commentform input::placeholder, #commentform textarea::placeholder',
+        'selectors'      => '#commentform input[type="text"]::placeholder, #commentform textarea::placeholder, #commentform input[type="email"]::placeholder,#commentform input[type="password"]::placeholder,#commentform input[type="url"]::placeholder,#commentform input[type="tel"]::placeholder,#commentform input[type="date"]::placeholder',
         'transport'      => 'postMessage'
     );
 

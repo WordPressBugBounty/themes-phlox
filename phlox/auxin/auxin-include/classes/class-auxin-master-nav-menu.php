@@ -34,6 +34,15 @@ class Auxin_Master_Nav_Menu {
     function __construct(){
 
         // Defining the custom fields for menu items
+        add_action( 'init', [ $this, 'prepare_menu_item_fields' ] );
+
+        // Change the walker class and default args for front end navigation menu
+        add_filter( 'wp_nav_menu_args'      , array( $this, 'change_nav_menu_frontend_walker' ), 9, 1 );
+        // Add HTML comment before and after of menu section
+        add_filter( 'wp_nav_menu'           , array( $this, 'add_html_comment_nav_menu_front' ), 9, 1 );
+    }
+
+    public function prepare_menu_item_fields() {
         $this->__menu_item_fields = array(
 
             'megamenu' => array(
@@ -158,12 +167,6 @@ class Auxin_Master_Nav_Menu {
                 'visible'   => array( 'page' ),
             )
         );
-
-
-        // Change the walker class and default args for front end navigation menu
-        add_filter( 'wp_nav_menu_args'      , array( $this, 'change_nav_menu_frontend_walker' ), 9, 1 );
-        // Add HTML comment before and after of menu section
-        add_filter( 'wp_nav_menu'           , array( $this, 'add_html_comment_nav_menu_front' ), 9, 1 );
     }
 
     /* Back End

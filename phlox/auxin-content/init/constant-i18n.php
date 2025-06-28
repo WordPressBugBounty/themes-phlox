@@ -13,7 +13,6 @@
 /*-----------------------------------------------------------------------------------*/
 
 if( ! defined('THEME_NAME_I18N') ) define( 'THEME_NAME_I18N' , esc_attr__( 'Phlox', 'phlox' ) );
-if( ! defined('THEME_PRO' )      ) define( 'THEME_PRO'       ,  false   );
 if( ! defined('THEME_PRO_NAME_I18N') ) define( 'THEME_PRO_NAME_I18N' , esc_attr__( 'Phlox Pro', 'phlox' ) );
 
 

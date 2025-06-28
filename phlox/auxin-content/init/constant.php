@@ -22,4 +22,7 @@ if( ! defined('THEME'.'_DOMAIN') ) define( 'THEME'.'_DOMAIN' ,  'phlox' );
 
 if( ! defined('THEME_NAME')      ) define( 'THEME_NAME'      , esc_attr( $theme_data->Name ) );
 
+if( ! defined('THEME_PRO' )      ) define( 'THEME_PRO'       ,  false   );
+
+
 /*-----------------------------------------------------------------------------------*/

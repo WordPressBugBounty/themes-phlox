@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Phlox Pro\n"
 "Report-Msgid-Bugs-To: http://averta.net/phlox/wordpress-theme/\n"
-"POT-Creation-Date: 2025-03-01 06:43:16+00:00\n"
+"POT-Creation-Date: 2025-06-24 08:57:13+00:00\n"
 "PO-Revision-Date: 2019-08-04 03:37+0430\n"
 "Last-Translator: test <monsterwordpress@gmail.com>\n"
 "Language-Team: WPMonster.co\n"
@@ -26,9 +26,9 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-2: _devDependencies\n"
 "X-Poedit-SearchPathExcluded-3: node_modules\n"
 
-#: auxin/auxin-include/auxin.php:279
-#: build/phlox/auxin/auxin-include/auxin.php:282
-#: build/phlox-pro/auxin/auxin-include/auxin.php:282
+#: auxin/auxin-include/auxin.php:283
+#: build/phlox/auxin/auxin-include/auxin.php:286
+#: build/phlox-pro/auxin/auxin-include/auxin.php:286
 msgid ""
 "Phlox theme cannot function properly due to following reason: \"Phlox Core "
 "Elements\" version %s is required. Current version is %s. Please update it. "
@@ -574,19 +574,19 @@ msgid "Edit"
 msgstr "ویرایش"
 
 #: auxin/auxin-include/classes/class-auxin-customize-control.php:1769
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:69
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:78
 #: auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:319
 #: auxin-content/options/auxin-options.php:486
 #: auxin-content/options/auxin-options.php:5760
 #: auxin-content/options/auxin-options.php:9209
 #: build/phlox/auxin/auxin-include/classes/class-auxin-customize-control.php:1772
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:72
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:81
 #: build/phlox/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:322
 #: build/phlox/auxin-content/options/auxin-options.php:423
 #: build/phlox/auxin-content/options/auxin-options.php:5487
 #: build/phlox/auxin-content/options/auxin-options.php:8912
 #: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-control.php:1772
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:72
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:81
 #: build/phlox-pro/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:322
 #: build/phlox-pro/auxin-content/options/auxin-options.php:423
 #: build/phlox-pro/auxin-content/options/auxin-options.php:5487
@@ -595,7 +595,7 @@ msgid "Top"
 msgstr "بالا"
 
 #: auxin/auxin-include/classes/class-auxin-customize-control.php:1770
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:68
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:77
 #: auxin-content/admin/metaboxes/metabox-fields-general-layout.php:158
 #: auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:634
 #: auxin-content/options/auxin-options.php:6128
@@ -603,7 +603,7 @@ msgstr "بالا"
 #: auxin-content/options/auxin-options.php:9575
 #: auxin-content/options/auxin-options.php:12519
 #: build/phlox/auxin/auxin-include/classes/class-auxin-customize-control.php:1773
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:71
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:80
 #: build/phlox/auxin-content/admin/metaboxes/metabox-fields-general-layout.php:161
 #: build/phlox/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:637
 #: build/phlox/auxin-content/options/auxin-options.php:5855
@@ -611,7 +611,7 @@ msgstr "بالا"
 #: build/phlox/auxin-content/options/auxin-options.php:9278
 #: build/phlox/auxin-content/options/auxin-options.php:11294
 #: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-control.php:1773
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:71
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:80
 #: build/phlox-pro/auxin-content/admin/metaboxes/metabox-fields-general-layout.php:161
 #: build/phlox-pro/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:637
 #: build/phlox-pro/auxin-content/options/auxin-options.php:5855
@@ -622,19 +622,19 @@ msgid "Right"
 msgstr "راست"
 
 #: auxin/auxin-include/classes/class-auxin-customize-control.php:1771
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:70
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:79
 #: auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:321
 #: auxin-content/options/auxin-options.php:487
 #: auxin-content/options/auxin-options.php:5762
 #: auxin-content/options/auxin-options.php:9211
 #: build/phlox/auxin/auxin-include/classes/class-auxin-customize-control.php:1774
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:73
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:82
 #: build/phlox/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:324
 #: build/phlox/auxin-content/options/auxin-options.php:424
 #: build/phlox/auxin-content/options/auxin-options.php:5489
 #: build/phlox/auxin-content/options/auxin-options.php:8914
 #: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-control.php:1774
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:73
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:82
 #: build/phlox-pro/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:324
 #: build/phlox-pro/auxin-content/options/auxin-options.php:424
 #: build/phlox-pro/auxin-content/options/auxin-options.php:5489
@@ -643,7 +643,7 @@ msgid "Bottom"
 msgstr "پایین"
 
 #: auxin/auxin-include/classes/class-auxin-customize-control.php:1772
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:67
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:76
 #: auxin-content/admin/metaboxes/metabox-fields-general-layout.php:156
 #: auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:626
 #: auxin-content/admin/metaboxes/metabox-fields-post-content-setting.php:54
@@ -654,7 +654,7 @@ msgstr "پایین"
 #: auxin-content/options/auxin-options.php:9567
 #: auxin-content/options/auxin-options.php:12511
 #: build/phlox/auxin/auxin-include/classes/class-auxin-customize-control.php:1775
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:70
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:79
 #: build/phlox/auxin-content/admin/metaboxes/metabox-fields-general-layout.php:159
 #: build/phlox/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:629
 #: build/phlox/auxin-content/admin/metaboxes/metabox-fields-post-content-setting.php:57
@@ -665,7 +665,7 @@ msgstr "پایین"
 #: build/phlox/auxin-content/options/auxin-options.php:9270
 #: build/phlox/auxin-content/options/auxin-options.php:11286
 #: build/phlox-pro/auxin/auxin-include/classes/class-auxin-customize-control.php:1775
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:70
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:79
 #: build/phlox-pro/auxin-content/admin/metaboxes/metabox-fields-general-layout.php:159
 #: build/phlox-pro/auxin-content/admin/metaboxes/metabox-fields-general-title-setting.php:629
 #: build/phlox-pro/auxin-content/admin/metaboxes/metabox-fields-post-content-setting.php:57
@@ -883,55 +883,55 @@ msgstr "انتخاب ویدیو"
 msgid "Choose Video"
 msgstr "انتخاب ویدیو"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:37
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:40
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:40
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:46
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:49
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:49
 msgid "Submenu as Mega menu"
 msgstr "زیرمنو به عنوان مگامنو"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:44
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:47
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:47
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:53
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:56
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:56
 msgid "Disable Link"
 msgstr "غیرفعال کردن لینک"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:50
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:53
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:53
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:59
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:62
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:62
 msgid "Hide Label"
 msgstr "پنهان سازی برچسب"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:56
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:65
 #: auxin-content/options/auxin-options.php:4831
 #: auxin-content/options/auxin-options.php:5098
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:59
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:68
 #: build/phlox/auxin-content/options/auxin-options.php:4558
 #: build/phlox/auxin-content/options/auxin-options.php:4825
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:59
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:68
 #: build/phlox-pro/auxin-content/options/auxin-options.php:4558
 #: build/phlox-pro/auxin-content/options/auxin-options.php:4825
 msgid "Icon"
 msgstr "آیکون"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:62
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:65
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:65
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:71
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:74
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:74
 msgid "Icon Alignment"
 msgstr "تراز آیکون"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:66
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:75
 #: auxin/auxin-include/classes/class-auxin-metabox-view.php:842
 #: auxin-content/options/auxin-options.php:769
 #: auxin-content/options/auxin-options.php:6415
 #: auxin-content/options/auxin-options.php:9863
 #: auxin-content/options/auxin-options.php:11829
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:69
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:78
 #: build/phlox/auxin/auxin-include/classes/class-auxin-metabox-view.php:845
 #: build/phlox/auxin-content/options/auxin-options.php:706
 #: build/phlox/auxin-content/options/auxin-options.php:6142
 #: build/phlox/auxin-content/options/auxin-options.php:9566
 #: build/phlox/auxin-content/options/auxin-options.php:10702
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:69
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:78
 #: build/phlox-pro/auxin/auxin-include/classes/class-auxin-metabox-view.php:845
 #: build/phlox-pro/auxin-content/options/auxin-options.php:706
 #: build/phlox-pro/auxin-content/options/auxin-options.php:6142
@@ -940,71 +940,71 @@ msgstr "تراز آیکون"
 msgid "Auto"
 msgstr "خودکار"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:75
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:78
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:78
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:84
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:87
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:87
 msgid "Start Row From Here"
 msgstr "شروع ردیف از اینجا"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:83
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:86
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:86
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:92
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:95
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:95
 msgid "Hide Title"
 msgstr "پنهان سازی عنوان"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:91
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:94
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:94
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:100
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:103
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:103
 msgid "Number of Columns"
 msgstr "تعداد ستون ها"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:107
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:110
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:110
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:116
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:119
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:119
 msgid "Hide on Desktop"
 msgstr "پنهان سازی در دسکتاپ"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:113
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:116
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:116
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:122
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:125
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:125
 msgid "Hide on Tablet"
 msgstr "پنهان سازی در تبلت"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:119
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:122
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:122
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:128
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:131
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:131
 msgid "Hide on Mobile"
 msgstr "پنهان سازی در موبایل"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:125
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:128
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:128
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:134
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:137
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:137
 #, fuzzy
 msgid "Secondary Text"
 msgstr "متن ثانویه"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:131
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:134
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:134
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:140
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:143
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:143
 #, fuzzy
 msgid "Secondary Text Background Color"
 msgstr "رنگ پس زمینه متن ثانویه"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:137
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:140
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:140
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:146
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:149
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:149
 msgid "Custom Style"
 msgstr "استایل دلخواه"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:143
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:146
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:146
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:152
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:155
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:155
 msgid "Image ID"
 msgstr "شناسه تصویر"
 
-#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:151
-#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:154
-#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:154
+#: auxin/auxin-include/classes/class-auxin-master-nav-menu.php:160
+#: build/phlox/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:163
+#: build/phlox-pro/auxin/auxin-include/classes/class-auxin-master-nav-menu.php:163
 msgid "Link/anchor ID"
 msgstr ""
 
@@ -2258,101 +2258,101 @@ msgstr "جستجو..."
 msgid "Type here.."
 msgstr "اینجا تایپ کنید..."
 
-#: auxin/auxin-include/include/functions.php:2968
-#: auxin/auxin-include/include/functions.php:2971
-#: build/phlox/auxin/auxin-include/include/functions.php:2897
-#: build/phlox/auxin/auxin-include/include/functions.php:2900
+#: auxin/auxin-include/include/functions.php:2973
+#: auxin/auxin-include/include/functions.php:2976
+#: build/phlox/auxin/auxin-include/include/functions.php:2902
+#: build/phlox/auxin/auxin-include/include/functions.php:2905
 #: build/phlox/searchform.php:13
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:2897
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:2900
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:2902
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:2905
 #: build/phlox-pro/searchform.php:13 searchform.php:10
 msgid "Search"
 msgstr "جستجو"
-
-#: auxin/auxin-include/include/functions.php:3074
-#: build/phlox/auxin/auxin-include/include/functions.php:3003
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3003
-#, fuzzy
-msgid "items"
-msgstr "آیتم های لیست"
 
 #: auxin/auxin-include/include/functions.php:3079
 #: build/phlox/auxin/auxin-include/include/functions.php:3008
 #: build/phlox-pro/auxin/auxin-include/include/functions.php:3008
 #, fuzzy
+msgid "items"
+msgstr "آیتم های لیست"
+
+#: auxin/auxin-include/include/functions.php:3084
+#: build/phlox/auxin/auxin-include/include/functions.php:3013
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3013
+#, fuzzy
 msgid "Sub total"
 msgstr "ساب فوتر"
 
-#: auxin/auxin-include/include/functions.php:3085
-#: build/phlox/auxin/auxin-include/include/functions.php:3014
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3014
+#: auxin/auxin-include/include/functions.php:3090
+#: build/phlox/auxin/auxin-include/include/functions.php:3019
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3019
 #, fuzzy
 msgid "Proceed to checkout"
 msgstr "ادامه برای تسویه حساب"
 
-#: auxin/auxin-include/include/functions.php:3085
-#: build/phlox/auxin/auxin-include/include/functions.php:3014
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3014
+#: auxin/auxin-include/include/functions.php:3090
+#: build/phlox/auxin/auxin-include/include/functions.php:3019
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3019
 msgid "Checkout"
 msgstr "بررسی کنید"
 
-#: auxin/auxin-include/include/functions.php:3094
-#: build/phlox/auxin/auxin-include/include/functions.php:3023
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3023
+#: auxin/auxin-include/include/functions.php:3099
+#: build/phlox/auxin/auxin-include/include/functions.php:3028
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3028
 msgid "View Cart"
 msgstr "مشاهده سبد خرید"
 
-#: auxin/auxin-include/include/functions.php:3152
+#: auxin/auxin-include/include/functions.php:3157
 #: auxin/auxin-include/include/templates/templates-footer.php:37
 #: auxin-content/options/auxin-options.php:2200
-#: build/phlox/auxin/auxin-include/include/functions.php:3081
+#: build/phlox/auxin/auxin-include/include/functions.php:3086
 #: build/phlox/auxin/auxin-include/include/templates/templates-footer.php:40
 #: build/phlox/auxin-content/options/auxin-options.php:2117
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3081
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3086
 #: build/phlox-pro/auxin/auxin-include/include/templates/templates-footer.php:40
 #: build/phlox-pro/auxin-content/options/auxin-options.php:2117
 msgid "Shopping Basket"
 msgstr "زنبیل خرید"
 
-#: auxin/auxin-include/include/functions.php:3157
+#: auxin/auxin-include/include/functions.php:3162
 #: auxin/auxin-include/include/templates/templates-post.php:1940
-#: build/phlox/auxin/auxin-include/include/functions.php:3086
+#: build/phlox/auxin/auxin-include/include/functions.php:3091
 #: build/phlox/auxin/auxin-include/include/templates/templates-post.php:1943
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3086
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3091
 #: build/phlox-pro/auxin/auxin-include/include/templates/templates-post.php:1943
 msgid "View your shopping cart"
 msgstr "نمایش سبد خرید"
 
-#: auxin/auxin-include/include/functions.php:3226
-#: build/phlox/auxin/auxin-include/include/functions.php:3155
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3155
+#: auxin/auxin-include/include/functions.php:3231
+#: build/phlox/auxin/auxin-include/include/functions.php:3160
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3160
 #, fuzzy
 msgid "Post"
 msgstr "مطالب"
 
-#: auxin/auxin-include/include/functions.php:3230
-#: build/phlox/auxin/auxin-include/include/functions.php:3159
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3159
+#: auxin/auxin-include/include/functions.php:3235
+#: build/phlox/auxin/auxin-include/include/functions.php:3164
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3164
 #, fuzzy
 msgid "Product"
 msgstr "آخرین محصولات"
 
-#: auxin/auxin-include/include/functions.php:3234
-#: build/phlox/auxin/auxin-include/include/functions.php:3163
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3163
+#: auxin/auxin-include/include/functions.php:3239
+#: build/phlox/auxin/auxin-include/include/functions.php:3168
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3168
 #, fuzzy
 msgid "Portfolio"
 msgstr "نمونه کار"
 
-#: auxin/auxin-include/include/functions.php:3238
-#: build/phlox/auxin/auxin-include/include/functions.php:3167
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3167
+#: auxin/auxin-include/include/functions.php:3243
+#: build/phlox/auxin/auxin-include/include/functions.php:3172
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3172
 msgid "News"
 msgstr ""
 
-#: auxin/auxin-include/include/functions.php:3242
-#: build/phlox/auxin/auxin-include/include/functions.php:3171
-#: build/phlox-pro/auxin/auxin-include/include/functions.php:3171
+#: auxin/auxin-include/include/functions.php:3247
+#: build/phlox/auxin/auxin-include/include/functions.php:3176
+#: build/phlox-pro/auxin/auxin-include/include/functions.php:3176
 msgid "FAQ"
 msgstr ""
 
@@ -6372,17 +6372,17 @@ msgstr ""
 "این قالب حداقل به وردپرس 4.7 و PHP 5.4 نیاز دارد. شما در حال استفاده از "
 "وردپرس %s و PHP %s هستید. لطفا بروزرسانی نمایید و مجددا امتحان کنید."
 
-#: auxin-content/init/constant-i18n.php:17
-#: auxin-content/init/constant-i18n.php:22
-#: build/phlox/auxin-content/init/constant-i18n.php:17
+#: auxin-content/init/constant-i18n.php:16
+#: auxin-content/init/constant-i18n.php:20
+#: build/phlox/auxin-content/init/constant-i18n.php:16
+#: build/phlox-pro/auxin-content/init/constant-i18n.php:15
 #: build/phlox-pro/auxin-content/init/constant-i18n.php:16
-#: build/phlox-pro/auxin-content/init/constant-i18n.php:17
 msgid "Phlox Pro"
 msgstr "فلوکس پرو"
 
-#: auxin-content/init/constant-i18n.php:26
-#: build/phlox/auxin-content/init/constant-i18n.php:21
-#: build/phlox-pro/auxin-content/init/constant-i18n.php:21
+#: auxin-content/init/constant-i18n.php:24
+#: build/phlox/auxin-content/init/constant-i18n.php:20
+#: build/phlox-pro/auxin-content/init/constant-i18n.php:20
 msgid "PHLOX"
 msgstr "فلوکس"
 
