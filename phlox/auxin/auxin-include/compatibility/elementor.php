@@ -175,7 +175,8 @@ function auxin_allow_elementor_svg_tags( $tags ) {
     return array_merge( $tags, [
         'feoffset', 
         'fecomposite', 
-        'feflood'
+        'feflood',
+        'fegaussianblur'
     ] );
 }
 add_filter( 'elementor/files/svg/allowed_elements', 'auxin_allow_elementor_svg_tags');

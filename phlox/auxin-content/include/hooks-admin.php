@@ -59,6 +59,8 @@ function auxin_theme_register_recommended_plugins() {
             'name'       => __('Depicter', 'phlox'),
             'slug'       => 'depicter',
             'required'   => false,
+            'version'    => '4.0.6',
+            'source'     => 'https://downloads.wordpress.org/plugin/depicter.zip',
             'categories' => array('auxin', 'recommended', 'essential', 'bundled')
         ),
 

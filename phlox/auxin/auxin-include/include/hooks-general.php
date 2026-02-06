@@ -622,6 +622,7 @@ function auxin_allow_img_srcset_shortcode( $allowedposttags, $context ) {
             'd' => [],
             'fill' => [],
             'fill-rule' => [],
+            'fill-opacity' => [],
             'width' => [],
             'height' => [],
             'transform' => [],
@@ -629,6 +630,7 @@ function auxin_allow_img_srcset_shortcode( $allowedposttags, $context ) {
             'stroke' => [],
             'opacity' => [],
             'style' => [],
+            'mask' => []
         ];
         $allowedposttags['line'] = [
             'id' => [],
@@ -662,6 +664,7 @@ function auxin_allow_img_srcset_shortcode( $allowedposttags, $context ) {
             'style' => [],
             'filter' => [],
             'mask' => [],
+            'data-figma-bg-blur-radius' => []
         ];
         $allowedposttags['rect'] = [
             'id' => [],
@@ -801,6 +804,13 @@ function auxin_allow_img_srcset_shortcode( $allowedposttags, $context ) {
             'in' => [],
             'in2' => [],
         ];
+        $allowedposttags['foreignobject'] = [
+            'x' => [],
+            'y' => [],
+            'width' => [],
+            'height' => [],
+
+        ];
         $allowedposttags['desc'] = [];
         $allowedposttags['marker'] = [];
         $allowedposttags['mask'] = [
@@ -811,6 +821,7 @@ function auxin_allow_img_srcset_shortcode( $allowedposttags, $context ) {
             'y' => [],
             'width' => [],
             'height' => [],
+            'fill' => []
         ];
         $allowedposttags['metadata'] = [];
         $allowedposttags['pattern'] = [
@@ -846,7 +857,10 @@ function auxin_allow_css_properties( $properties ) {
         'stroke-width',
         'stroke-opacity',
         'fill-opacity',
-        'mix-blend-mode'
+        'mix-blend-mode',
+        'mask-type',
+        'backdrop-filter',
+        'clip-path'
     ]);
 }
 add_filter( 'safe_style_css', 'auxin_allow_css_properties' );

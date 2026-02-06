@@ -22,7 +22,7 @@
              */
             function installPlugin($data) {
                 // todo: modify these lines to just install auxin-pro-tools after approving auxin-elements
-                if ( $data['data-plugin-slug'] == 'auxin-pro-tools' ) {
+                if ($data['data-plugin-slug'] == 'auxin-pro-tools' || $data['data-plugin-slug'] == 'depicter') {
                     var _ajaxData = {
                         action: "aux_setup_plugins",
                         wpnonce: $data['data-wpnonce'],
@@ -33,6 +33,9 @@
                     if ($data['data-plugin-slug'] == 'auxin-pro-tools') {
                         _ajaxData.slug = 'auxin-pro-tools';
                         _ajaxData.plugins = ['auxin-pro-tools'];
+                    } else if ($data['data-plugin-slug'] == 'depicter') {
+                        _ajaxData.slug = 'depicter';
+                        _ajaxData.plugins = ['depicter'];
                     } else {
                         _ajaxData.slug = 'auxin-elements';
                         _ajaxData.plugins = ['auxin-elements'];

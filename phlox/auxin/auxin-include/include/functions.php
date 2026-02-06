@@ -216,6 +216,9 @@ function auxin_get_template_file( $slug, $name = '', $extra_template_path = '' )
 
     // Add slash at the end of path
     if( $extra_template_path ){
+        if ( preg_match( '/^[a-zA-Z0-9]+:\/\//', $extra_template_path ) ) {
+            exit( __( 'Invalid path scheme detected.', 'phlox' ) );
+        }
         $extra_template_path = trailingslashit( (string)$extra_template_path );
     }
 
@@ -3087,9 +3090,15 @@ if ( ! function_exists( 'auxin_get_cart_basket' ) ) {
         $subtotal    = is_object( $woocommerce->cart ) ? $woocommerce->cart->get_cart_subtotal() : 0;
 
         ob_start();
+
+        $icon_class_name = ! is_array( $args['icon'] ) ? $args['icon'] : "";
     ?>
-        <a class="aux-cart-contents <?php echo esc_attr( $args['icon'] ); ?>" href="<?php echo esc_url( $args['cart_url'] ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'phlox' ); ?>">
-            <?php echo isset( $args['title'] ) ? $args['title'] : '';
+        <a class="aux-cart-contents <?php echo esc_attr( $icon_class_name ); ?>" href="<?php echo esc_url( $args['cart_url'] ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'phlox' ); ?>">
+            <?php 
+            echo isset( $args['title'] ) ? $args['title'] : '';
+            if ( is_array( $args['icon'] ) && !empty( $args['icon'] ) && class_exists('\Elementor\Icons_Manager') ) {
+                \Elementor\Icons_Manager::render_icon( $args['icon'] );
+            }
             echo '<span>' . $count . '</span>'; ?>
         </a>
 

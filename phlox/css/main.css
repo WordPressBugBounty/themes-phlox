@@ -1589,19 +1589,19 @@ table tr td, table tr:nth-child(even) td, table tr.even td { background: transpa
   to { transform: none; } }
 @keyframes AuxSlideFromRight { from { transform: translateX(100%); }
   to { opacity: 1; transform: none; } }
-.aux-anim-slide-from-right, .aux-animated.aux-slide-from-right > .elementor-widget-container, .aux-animated.aux-slide-from-right > .elementor-column-wrap { animation-name: AuxSlideFromRight; }
+.aux-anim-slide-from-right, .aux-animated.aux-slide-from-right > *, .aux-animated.aux-slide-from-right > .elementor-column-wrap { animation-name: AuxSlideFromRight; }
 
 @keyframes AuxSlideFromLeft { from { transform: translateX(-100%); }
   to { opacity: 1; transform: none; } }
-.aux-anim-slide-from-left, .aux-animated.aux-slide-from-left > .elementor-widget-container, .aux-animated.aux-slide-from-left > .elementor-column-wrap { animation-name: AuxSlideFromLeft; }
+.aux-anim-slide-from-left, .aux-animated.aux-slide-from-left > *, .aux-animated.aux-slide-from-left > .elementor-column-wrap { animation-name: AuxSlideFromLeft; }
 
 @keyframes AuxSlideFromTop { from { transform: translateY(-100%); }
   to { opacity: 1; transform: none; } }
-.aux-anim-slide-from-top, .aux-animated.aux-slide-from-top > .elementor-widget-container, .aux-animated.aux-slide-from-top > .elementor-column-wrap { animation-name: AuxSlideFromTop; }
+.aux-anim-slide-from-top, .aux-animated.aux-slide-from-top > *, .aux-animated.aux-slide-from-top > .elementor-column-wrap { animation-name: AuxSlideFromTop; }
 
 @keyframes AuxSlideFromBot { from { transform: translateY(100%); }
   to { opacity: 1; transform: none; } }
-.aux-anim-slide-from-bot, .aux-animated.aux-slide-from-bot > .elementor-widget-container, .aux-animated.aux-slide-from-bot > .elementor-column-wrap { animation-name: AuxSlideFromBot; }
+.aux-anim-slide-from-bot, .aux-animated.aux-slide-from-bot > *, .aux-animated.aux-slide-from-bot > .elementor-column-wrap { animation-name: AuxSlideFromBot; }
 
 @keyframes AuxMaskFromTop { from { clip-path: inset(0 0 100% 0); opacity: 1; }
   to { clip-path: inset(0 0 0 0); opacity: 1; } }
@@ -1629,13 +1629,13 @@ table tr td, table tr:nth-child(even) td, table tr.even td { background: transpa
 .aux-animation-off { animation: none !important; }
 
 .aux-animated.aux-slide-from-right { overflow: hidden; opacity: 1; }
-.aux-animated.aux-slide-from-right > .elementor-widget-container, .aux-animated.aux-slide-from-right > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
+.aux-animated.aux-slide-from-right > *, .aux-animated.aux-slide-from-right > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
 .aux-animated.aux-slide-from-left { overflow: hidden; opacity: 1; }
-.aux-animated.aux-slide-from-left > .elementor-widget-container, .aux-animated.aux-slide-from-left > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
+.aux-animated.aux-slide-from-left > *, .aux-animated.aux-slide-from-left > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
 .aux-animated.aux-slide-from-top { overflow: hidden; opacity: 1; }
-.aux-animated.aux-slide-from-top > .elementor-widget-container, .aux-animated.aux-slide-from-top > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
+.aux-animated.aux-slide-from-top > *, .aux-animated.aux-slide-from-top > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
 .aux-animated.aux-slide-from-bot { overflow: hidden; opacity: 1; }
-.aux-animated.aux-slide-from-bot > .elementor-widget-container, .aux-animated.aux-slide-from-bot > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
+.aux-animated.aux-slide-from-bot > *, .aux-animated.aux-slide-from-bot > .elementor-column-wrap { animation-duration: inherit; animation-fill-mode: inherit; animation-timing-function: inherit; animation-delay: inherit; }
 
 .aux-isotope-animated { overflow: hidden; transition: height 800ms cubic-bezier(0.75, 0.1, 0.25, 0.9); }
 .aux-isotope-animated .aux-iso-item:not(.aux-ajax-anim) { transition: transform 0ms cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0ms cubic-bezier(0.25, 0.1, 0.25, 1); opacity: 1; }

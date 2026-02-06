@@ -10,7 +10,7 @@ if ( isset( $_GET['post_type'] ) && in_array( sanitize_text_field( $_GET['post_t
 } else {
     // TODO: get first post type from options -
     //  do it when ajax search merged with develop and get option from options available in that task
-    $first_post_type = count( $available_post_types ) > 1 || empty( $available_post_types ) ? 'post' : reset( $available_post_types );
+    $first_post_type = !empty( $available_post_types ) ? reset( $available_post_types ) : 'post'  ;
 }
 
 // Set Query Arguments

@@ -1930,6 +1930,8 @@ function auxin_wc_add_to_cart( $args = array() ){
 	    //Get cart contents count number
 	    $count  = is_object( $woocommerce->cart ) ? (int) $woocommerce->cart->cart_contents_count : 0;
 
+        $icon_class_name = ! is_array( $args['icon'] ) ? $args['icon'] : "";
+
         ob_start();
     ?>
 
@@ -1938,15 +1940,19 @@ function auxin_wc_add_to_cart( $args = array() ){
             <?php echo auxin_get_cart_basket( $args, $count ); ?>
             </div>
             <div id="shopping-basket-burger" class="aux-shopping-basket aux-basket-burger aux-phone-on">
-                <a class="aux-cart-contents <?php echo esc_attr( $args['icon'] ); ?>"
+                <a class="aux-cart-contents <?php  echo esc_attr($icon_class_name);?>"
                 href="<?php echo esc_url( $args['cart_url'] ); ?>"
                 title="<?php esc_attr_e( 'View your shopping cart', 'phlox' ); ?>">
-            <?php
+                <?php
+                if ( is_array( $args['icon'] ) && !empty( $args['icon'] ) && class_exists('\Elementor\Icons_Manager') ) {
+                    \Elementor\Icons_Manager::render_icon( $args['icon'] );
+                }
+                
                 echo ! empty( $args['title'] ) ? esc_html( $args['title'] ) : '';
                 if ( $count > 0 ) {
                     echo '<span>' . esc_html( $count ) . '</span>';
                 }
-            ?>
+                ?>
                 </a>
             </div>
             <?php if( ! is_cart() && ! is_checkout() ){ ?>

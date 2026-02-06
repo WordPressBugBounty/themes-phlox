@@ -1,4 +1,4 @@
-/*! Auxin WordPress Framework - v2.17.7 (2025-06-24)
+/*! Auxin WordPress Framework - v2.17.11 (2025-11-30)
  *  Scripts for initializing plugins 
  *  http://averta.net
  *  (c) 2014-2025 averta;
@@ -305,7 +305,7 @@ for ( var i = 0 ; UlikeHeart.length > i; i++){
     // add more fixed elements here...
     var target = ".aux-search-popup, .aux-fs-popup";
     document.querySelectorAll(target).forEach(function (element) {
-      var closestAnimElement = element.closest(".aux-appear-watch-animation > .elementor-widget-container,.aux-appear-watch-animation > .elementor-column-wrap");
+      var closestAnimElement = element.closest(".aux-appear-watch-animation.elementor-widget > * ");
 
       if (closestAnimElement) {
         [closestAnimElement, closestAnimElement.parentElement].forEach(function (animElement) {
@@ -919,7 +919,12 @@ for ( var i = 0 ; UlikeHeart.length > i; i++){
         // Only init the parallax on deepest section
         $target.each( function(key, item){
             var $parallax_box = $(this);
-            $parallax_box.AvertaScrollAnims();
+            $parallax_box.AvertaScrollAnims({
+                onInit: function(element) {
+                    // Remove aux-appear-watch-animation class when scroll animation is initialized
+                    element.removeClass('aux-appear-watch-animation');
+                }
+            });
         });
     };
 
@@ -1380,7 +1385,7 @@ for ( var i = 0 ; UlikeHeart.length > i; i++){
                         height += $item.outerHeight();
                         $item.siblings(faqAccordionOptions.items).each(function (index, item) {
                             if ($(item).is(faqAccordionOptions.items)) {
-                                height += $(item).outerHeight();   
+                                height += $(item).outerHeight();
                             }
                         });
                         faqAccordion.find('.aux-isotope-faq').height(height);

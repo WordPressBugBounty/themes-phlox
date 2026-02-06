@@ -1,4 +1,4 @@
-/*! Auxin WordPress Framework - v2.17.7 - 2025-06-24
+/*! Auxin WordPress Framework - v2.17.11 - 2025-11-30
  *  All required plugins 
  *  http://averta.net
  */
@@ -16656,9 +16656,9 @@ window.averta = {};
                 slide.title = this.settings.titleMap($item, index, this);
             } else {
                 slide.title =
-                    $item.data("caption") ||
-                    $item.attr("title") ||
-                    $item.attr("alt");
+                    this._escapeHtml($item.data("caption")) ||
+                    this._escapeHtml($item.attr("title")) ||
+                    this._escapeHtml($item.attr("alt"));
             }
 
             // thumbnail
@@ -16681,6 +16681,17 @@ window.averta = {};
             $item.on("click.photoswipe", this._onItemClick.bind(this));
             this.slides.push(slide);
         },
+
+        _escapeHtml: function (str) {
+            if (typeof str !== 'string') return '';
+            return str
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        },
+
 
         _getVideoURLType: function (url) {
             if (url.match(youtubeRegex)) {
@@ -20016,75 +20027,344 @@ window.averta = {};
  * ================== js/src/plugins/averta-jquery.scrollAnims.js =================== 
  **/ 
 
-;(function ( $, window, document, undefined ) {
-
+(function ($, window, document, undefined) {
     "use strict";
 
     // Create the defaults once
     var pluginName = "AvertaScrollAnims",
-        defaults   = {
-            targets          : 'aux-scroll-anim',   // target elements classname to get styles in scroll,
-            elementOrigin    : 0.2,
+        defaults = {
+            targets: "aux-scroll-anim", // target elements classname to get styles in scroll,
+            elementOrigin: 0.2,
             viewPortTopOrigin: 0.4,
             viewPortBotOrigin: 0.6,
-            moveInEffect     : 'fade',              // fade
-            moveOutEffect    : 'fade',
-            xAxis            : 200,
-            yAxis            : -200,
-            rotate           : 90,
-            scale            : 1,
-            containerTarget  : '.elementor-widget-container',
-            disableScrollAnims: 1 // disable scroll animation under specified with (px)
+            moveInEffect: "fade", // fade
+            moveOutEffect: "fade",
+            xAxis: 200,
+            yAxis: -200,
+            rotate: 90,
+            scale: 1,
+            containerTarget: ".elementor-widget-container",
+            hasAnimationClass: "aux-appear-watch-animation",
+            checkForElementorLazyLoad: true,
+            containerTargetClass: "aux-scroll-container", // new class to add to the target container
+            autoCreateContainer: true, // if containerTarget is missing, create a wrapper
+            applyToDirectElement: "auto", // if true, applies parallax directly to the element while preserving existing styles , auto will apply to direct element if it has background style
+            disableScrollAnims: 1, // disable scroll animation under specified with (px)
+            onInit: null, // callback function called when scroll animation is initialized
         },
-
         attributeDataMap = {
-            'move-in' : 'moveInEffect',
-            'move-out': 'moveOutEffect',
-            'axis-x'  : 'xAxis',
-            'axis-y'  : 'yAxis',
-            'rotate'  : 'rotate',
-            'scale'   : 'scale',
-            'el-top'  : 'elementOrigin',
-            'vp-bot'  : 'viewPortBotOrigin',
-            'vp-top'  : 'viewPortTopOrigin',
-            'scroll-animation-off' : 'disableScrollAnims',
+            "move-in": "moveInEffect",
+            "move-out": "moveOutEffect",
+            "axis-x": "xAxis",
+            "axis-y": "yAxis",
+            rotate: "rotate",
+            scale: "scale",
+            "el-top": "elementOrigin",
+            "vp-bot": "viewPortBotOrigin",
+            "vp-top": "viewPortTopOrigin",
+            "scroll-animation-off": "disableScrollAnims",
+            "apply-to-direct-element": "applyToDirectElement",
+            "auto-create-container": "autoCreateContainer",
+            "container-target-class": "containerTargetClass",
+            "has-animation-class": "hasAnimationClass",
+            "check-for-elementor-lazy-load": "checkForElementorLazyLoad",
         },
-
         $window = $(window);
 
     // The actual plugin constructor
-    function Plugin ( element, options ) {
-        this.element  = element;
+    function Plugin(element, options) {
+        this.element = element;
         this.$element = $(element);
         // create element attribute options object
-		var elementData = {},
-			tempData;
-		for ( var attribute in attributeDataMap ) {
+        var elementData = {},
+            tempData;
+        for (var attribute in attributeDataMap) {
             tempData = this.$element.data(attribute);
-			if ( tempData !== undefined ) {
-				elementData[attributeDataMap[attribute]] = tempData;
-			}
-		}
+            if (tempData !== undefined) {
+                elementData[attributeDataMap[attribute]] = tempData;
+            }
+        }
 
-        this.settings  = $.extend( {}, defaults, options, elementData );
+        this.settings = $.extend({}, defaults, options, elementData);
         this._defaults = defaults;
-        this._name     = pluginName;
+        this._name = pluginName;
         this.init();
     }
 
     // Avoid Plugin.prototype conflicts
     $.extend(Plugin.prototype, {
         init: function () {
-            this._prefix                 = window._jcsspfx || '';
-            this.settings.viewPortOrigin = [ this.settings.viewPortTopOrigin , this.settings.viewPortBotOrigin ];
-            this.oldEffect               = this.settings.moveInEffect;
+            this._prefix = window._jcsspfx || "";
+            this.settings.viewPortOrigin = [
+                this.settings.viewPortTopOrigin,
+                this.settings.viewPortBotOrigin,
+            ];
+            this.oldEffect = this.settings.moveInEffect;
 
-            if ( this.$element.length === 0 ) {
+            if (this.$element.length === 0) {
                 return;
             }
 
-            $window.on( 'scroll resize', this.update.bind( this ) );
-            this.update();
+            // Check if element is affected by Elementor lazy load
+            if (
+                this.settings.checkForElementorLazyLoad &&
+                this._isAffectedByElementorLazyLoad() &&
+                this.settings.applyToDirectElement === "auto"
+            ) {
+                // Wait for Elementor lazy load to complete before checking background
+                this._waitForElementorLazyLoad();
+            } else if (
+                this.settings.applyToDirectElement === "auto" &&
+                !this._hasBackgroundStyle()
+            ) {
+                this.settings.applyToDirectElement = false;
+            }
+
+            if (this.settings.applyToDirectElement) {
+                this._waitForAnimationsToComplete();
+            } else {
+                this._initializeScrollAnimation();
+            }
+        },
+
+        /**
+         * Wait for Elementor lazy load to complete
+         * Observes when e-lazyloaded class is added to the element or parent
+         */
+        _waitForElementorLazyLoad: function () {
+            var self = this;
+            var lazyLoadParent = this._findElementorLazyLoadParent();
+
+            if (!lazyLoadParent) {
+                return;
+            }
+
+            // Check if already lazy loaded
+            if (lazyLoadParent.classList.contains("e-lazyloaded")) {
+                this._recheckBackgroundAfterLazyLoad();
+                return;
+            }
+
+            // Observe class changes with MutationObserver
+            var observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (
+                        mutation.type === "attributes" &&
+                        mutation.attributeName === "class" &&
+                        lazyLoadParent.classList.contains("e-lazyloaded")
+                    ) {
+                        observer.disconnect();
+                        setTimeout(function () {
+                            self._recheckBackgroundAfterLazyLoad();
+                        }, 50);
+                    }
+                });
+            });
+
+            observer.observe(lazyLoadParent, {
+                attributes: true,
+                attributeFilter: ["class"],
+            });
+        },
+
+        /**
+         * Recheck background style after Elementor lazy load completes
+         */
+        _recheckBackgroundAfterLazyLoad: function () {
+            if (!this._hasBackgroundStyle()) {
+                this.settings.applyToDirectElement = false;
+            }
+        },
+
+        /**
+         * Wait for all animations and transitions to complete before initializing scroll animation
+         */
+        _waitForAnimationsToComplete: async function () {
+            var element = this.$element[0];
+            var self = this;
+            var animationEnded = false;
+
+            function checkAndInitialize() {
+                if (animationEnded) {
+                    self._initializeScrollAnimation();
+                    // Call the onInit callback if provided
+                    if (
+                        self.settings.onInit &&
+                        typeof self.settings.onInit === "function"
+                    ) {
+                        self.settings.onInit.call(self, self.$element);
+                    }
+                }
+            }
+
+            // Listen for animation end (once)
+            var handleAnimationEnd = function (event) {
+                if (event.target === element) {
+                    element.removeEventListener(
+                        "animationend",
+                        handleAnimationEnd
+                    );
+                    animationEnded = true;
+                    checkAndInitialize();
+                }
+            };
+
+            element.addEventListener("animationend", handleAnimationEnd);
+
+            // Check if there are any animations/transitions running
+            var computedStyle = window.getComputedStyle(element);
+            var hasAnimation =
+                computedStyle.getPropertyValue("animation-name") !== "none" ||
+                element.classList.contains(this.settings.hasAnimationClass);
+
+            // If no animations or transitions, initialize immediately
+            if (!hasAnimation) {
+                animationEnded = true;
+                checkAndInitialize();
+            }
+        },
+
+        /**
+         * Find the Elementor lazy load parent element
+         * Returns the element with e-con e-parent classes or null if not found
+         */
+        _findElementorLazyLoadParent: function () {
+            var element = this.$element[0];
+
+            // Check if element itself has the classes
+            if (
+                element.classList.contains("e-con") &&
+                element.classList.contains("e-parent")
+            ) {
+                return element;
+            }
+
+            // Check if any parent has the classes
+            var parent = element.parentElement;
+            while (parent) {
+                if (
+                    parent.classList.contains("e-con") &&
+                    parent.classList.contains("e-parent")
+                ) {
+                    return parent;
+                }
+                parent = parent.parentElement;
+            }
+
+            return null;
+        },
+
+        /**
+         * Check if element or any parent has Elementor lazy load active
+         * Elementor's CSS uses .e-con.e-parent * selector which affects all children
+         */
+        _isAffectedByElementorLazyLoad: function () {
+            var lazyLoadParent = this._findElementorLazyLoadParent();
+            return (
+                lazyLoadParent &&
+                !lazyLoadParent.classList.contains("e-lazyloaded") &&
+                !lazyLoadParent.classList.contains("e-no-lazyload")
+            );
+        },
+
+        /**
+         * Element has any background style including background-image, background-color
+         */
+        _hasBackgroundStyle: function () {
+            var element = this.$element[0];
+            var computedStyle = window.getComputedStyle(element);
+
+            return (
+                !["none", "transparent", ""].includes(
+                    computedStyle.getPropertyValue("background-image")
+                ) ||
+                !["none", "transparent", "", "rgba(0, 0, 0, 0)"].includes(
+                    computedStyle.getPropertyValue("background-color")
+                )
+            );
+        },
+
+        /**
+         * Initialize scroll animation after animations complete
+         */
+        _initializeScrollAnimation: function () {
+            this._captureInitialStyles();
+            this._setupContainer();
+            requestAnimationFrame(() => {
+                $window.on("scroll resize", this.update.bind(this));
+                this.update();
+            });
+        },
+
+        /**
+         * Capture initial transform and opacity styles if applying to direct element
+         */
+        _captureInitialStyles: function () {
+            if (this.settings.applyToDirectElement) {
+                var element = this.$element[0];
+                var computedStyle = window.getComputedStyle(element);
+
+                // Store initial styles
+                this.initialStyles = {
+                    transform: computedStyle.getPropertyValue("transform"),
+                    opacity: computedStyle.getPropertyValue("opacity"),
+                };
+
+                // If transform is 'none', set it to empty string for easier concatenation
+                if (this.initialStyles.transform === "none") {
+                    this.initialStyles.transform = "";
+                }
+            }
+        },
+
+        /**
+         * Setup the container target with optional auto-creation and class application
+         */
+        _setupContainer: function () {
+            // If applying to direct element, use the element itself as container
+            if (this.settings.applyToDirectElement) {
+                this.$container = this.$element;
+                return;
+            }
+
+            var $container = this.$element.find(this.settings.containerTarget);
+
+            // If no container found and autoCreateContainer is enabled
+            if ($container.length === 0 && this.settings.autoCreateContainer) {
+                // if the element has only one child, and it's a block element and has not transform style, use the child as container
+                var element = this.$element[0];
+                if (
+                    element.children.length === 1 &&
+                    window.getComputedStyle(element.children[0]).transform ===
+                        "none"
+                ) {
+                    element.children[0].style.transition = "inherit";
+                    $container = $(element.children[0]);
+                } else {
+                    // Create a wrapper div using pure JavaScript
+                    var wrapper = document.createElement("div");
+                    wrapper.style.transition = "inherit";
+
+                    // Move all child nodes to the wrapper
+                    while (element.firstChild) {
+                        wrapper.appendChild(element.firstChild);
+                    }
+
+                    // Append the wrapper to the element
+                    element.appendChild(wrapper);
+
+                    // Set the container to the wrapper
+                    $container = $(wrapper);
+                }
+            }
+
+            // Apply containerTargetClass if container exists and class is specified
+            if ($container.length > 0 && this.settings.containerTargetClass) {
+                $container.addClass(this.settings.containerTargetClass);
+            }
+
+            // Store the container for later use
+            this.$container = $container;
         },
 
         /**
@@ -20092,24 +20372,38 @@ window.averta = {};
          * @param  {Element} $target
          * @param  {Number} scrollValue
          */
-        _setStyles: function( $target, scrollValue ) {
-            var delta  = this._getDelta( $target[0], this.settings.elementOrigin,  this.settings.viewPortOrigin ),
-                styles = this._getStyle( delta ),
-                effect;
+        _setStyles: function ($target, scrollValue) {
+            var delta = this._getDelta(
+                    $target[0],
+                    this.settings.elementOrigin,
+                    this.settings.viewPortOrigin
+                ),
+                styles = this._getStyle(delta),
+                effect,
+                $container =
+                    this.$container && this.$container.length > 0
+                        ? this.$container
+                        : this.settings.applyToDirectElement
+                        ? $target
+                        : $target.find(this.settings.containerTarget);
 
-            if ( delta < 0 ) {
+            if (delta < 0) {
                 effect = this.settings.moveOutEffect;
-            } else if ( delta > 0 ) {
+            } else if (delta > 0) {
                 effect = this.settings.moveInEffect;
             } else {
                 effect = this.oldEffect;
             }
 
-            if ( this.oldEffect !== effect ) {
-                this._generateEffect( this.oldEffect, this._getStyle( 0 ), $target.find( this.settings.containerTarget ) );
+            if (this.oldEffect !== effect) {
+                this._generateEffect(
+                    this.oldEffect,
+                    this._getStyle(0),
+                    $container
+                );
             }
 
-            this._generateEffect( effect, styles, $target.find( this.settings.containerTarget ) );
+            this._generateEffect(effect, styles, $container);
 
             this.oldEffect = effect;
         },
@@ -20119,105 +20413,266 @@ window.averta = {};
          * @param  {Element} $target
          */
 
-        _getDelta: function( $target, elementOrigin,  viewPortOrigin ) {
-            var dimensions      = $target.getBoundingClientRect(),
-                isRange         = Array.isArray( viewPortOrigin ),
-                lowerRange      = isRange ? viewPortOrigin[0] : viewPortOrigin,
-                upperRange      = isRange ? viewPortOrigin[1] : viewPortOrigin,
-                elementTop      = ( dimensions.y + ( elementOrigin * dimensions.height ) ),
+        _getDelta: function ($target, elementOrigin, viewPortOrigin) {
+            var dimensions = $target.getBoundingClientRect(),
+                isRange = Array.isArray(viewPortOrigin),
+                lowerRange = isRange ? viewPortOrigin[0] : viewPortOrigin,
+                upperRange = isRange ? viewPortOrigin[1] : viewPortOrigin,
+                elementTop = dimensions.y + elementOrigin * dimensions.height,
                 elementPosition = elementTop / window.innerHeight,
                 delta;
 
-                if ( elementPosition >= lowerRange &&  elementPosition <= upperRange ) {
-                    delta = 0;
-                } else if ( elementPosition >= upperRange ) {
-                    delta = Math.min( ( elementTop - window.innerHeight * upperRange ) / ( window.innerHeight - ( window.innerHeight * upperRange ) ) , 1 );
-                } else {
-                    delta = Math.max( ( elementTop - window.innerHeight * lowerRange ) / ( window.innerHeight * lowerRange ) , -1 );
-                }
+            if (
+                elementPosition >= lowerRange &&
+                elementPosition <= upperRange
+            ) {
+                delta = 0;
+            } else if (elementPosition >= upperRange) {
+                delta = Math.min(
+                    (elementTop - window.innerHeight * upperRange) /
+                        (window.innerHeight - window.innerHeight * upperRange),
+                    1
+                );
+            } else {
+                delta = Math.max(
+                    (elementTop - window.innerHeight * lowerRange) /
+                        (window.innerHeight * lowerRange),
+                    -1
+                );
+            }
 
-                return delta;
+            return delta;
         },
 
-        _getStyle: function( delta ) {
-            var style         = {};
-                style.opacity = 1 - Math.abs( delta ) ;
-                style.xAxis   = this.settings.xAxis * delta;
-                style.yAxis   = this.settings.yAxis * delta;
-                style.slide   = Math.abs( 100 * delta );
-                style.mask    = Math.abs( 100 * delta );;
-                style.rotate  = this.settings.rotate * delta;
-                style.scale   = ( ( this.settings.scale - 1 ) * Math.abs( delta ) ) + 1 ;
+        _getStyle: function (delta) {
+            var style = {};
+            style.opacity = 1 - Math.abs(delta);
+            style.xAxis = this.settings.xAxis * delta;
+            style.yAxis = this.settings.yAxis * delta;
+            style.slide = Math.abs(100 * delta);
+            style.mask = Math.abs(100 * delta);
+            style.rotate = this.settings.rotate * delta;
+            style.scale = (this.settings.scale - 1) * Math.abs(delta) + 1;
             return style;
         },
 
-        _generateEffect: function( effect , styles, $target ) {
-            switch( effect ) {
-                case 'moveVertical':
-                    $target[0].style[this._prefix + 'Transform'] = 'translateY(' + styles.yAxis + 'px)';
+        /**
+         * Combine existing transform with new transform when applying to direct element
+         */
+        _combineTransforms: function (newTransform) {
+            if (
+                this.settings.applyToDirectElement &&
+                this.initialStyles &&
+                this.initialStyles.transform
+            ) {
+                return newTransform + " " + this.initialStyles.transform;
+            }
+            return newTransform;
+        },
+
+        /**
+         * Combine existing opacity with new opacity when applying to direct element
+         */
+        _combineOpacity: function (newOpacity) {
+            if (
+                this.settings.applyToDirectElement &&
+                this.initialStyles &&
+                this.initialStyles.opacity !== "1"
+            ) {
+                return parseFloat(this.initialStyles.opacity) * newOpacity;
+            }
+            return newOpacity;
+        },
+
+        _generateEffect: function (effect, styles, $target) {
+            var element = $target[0];
+
+            switch (effect) {
+                case "moveVertical":
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateY(" + styles.yAxis + "px)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'moveHorizontal':
-                    $target[0].style[this._prefix + 'Transform'] = 'translateX(' + styles.xAxis + 'px)';
+                case "moveHorizontal":
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateX(" + styles.xAxis + "px)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'fade':
-                    $target[0].style.opacity = styles.opacity;
+                case "fade":
+                    element.style.setProperty(
+                        "opacity",
+                        this._combineOpacity(styles.opacity),
+                        "important"
+                    );
                     break;
-                case 'fadeTop':
-                    $target[0].style.opacity                     = styles.opacity;
-                    $target[0].style[this._prefix + 'Transform'] = 'translateY(' + -1 * styles.yAxis + 'px)';
+                case "fadeTop":
+                    element.style.setProperty(
+                        "opacity",
+                        this._combineOpacity(styles.opacity),
+                        "important"
+                    );
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateY(" + -1 * styles.yAxis + "px)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'fadeBottom':
-                    $target[0].style.opacity                     = styles.opacity;
-                    $target[0].style[this._prefix + 'Transform'] = 'translateY(' + styles.yAxis + 'px)';
+                case "fadeBottom":
+                    element.style.setProperty(
+                        "opacity",
+                        this._combineOpacity(styles.opacity),
+                        "important"
+                    );
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateY(" + styles.yAxis + "px)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'fadeRight':
-                    $target[0].style.opacity                     = styles.opacity;
-                    $target[0].style[this._prefix + 'Transform'] = 'translateX(' + styles.xAxis + 'px)';
+                case "fadeRight":
+                    element.style.setProperty(
+                        "opacity",
+                        this._combineOpacity(styles.opacity),
+                        "important"
+                    );
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateX(" + styles.xAxis + "px)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'fadeLeft':
-                    $target[0].style.opacity                     = styles.opacity;
-                    $target[0].style[this._prefix + 'Transform'] = 'translateX(' + -1 * styles.xAxis + 'px)';
+                case "fadeLeft":
+                    element.style.setProperty(
+                        "opacity",
+                        this._combineOpacity(styles.opacity),
+                        "important"
+                    );
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateX(" + -1 * styles.xAxis + "px)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'slideRight':
-                    $target.parent()[0].style.overflow                  = 'hidden';
-                    $target       [0].style[this._prefix + 'Transform'] = 'translateX(' +  styles.slide + '%)';
+                case "slideRight":
+                    $target.parent()[0].style.overflow = "hidden";
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateX(" + styles.slide + "%)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'slideLeft':
-                    $target.parent()[0].style.overflow                  = 'hidden';
-                    $target       [0].style[this._prefix + 'Transform'] = 'translateX(' +  -1 * styles.slide + '%)';
+                case "slideLeft":
+                    $target.parent()[0].style.overflow = "hidden";
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateX(" + -1 * styles.slide + "%)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'slideTop':
-                    $target.parent()[0].style.overflow                  = 'hidden';
-                    $target       [0].style[this._prefix + 'Transform'] = 'translateY(' + -1 * styles.slide + '%)';
+                case "slideTop":
+                    $target.parent()[0].style.overflow = "hidden";
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateY(" + -1 * styles.slide + "%)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'slideBottom':
-                    $target.parent()[0].style.overflow                  = 'hidden';
-                    $target       [0].style[this._prefix + 'Transform'] = 'translateY(' + styles.slide + '%)';
+                case "slideBottom":
+                    $target.parent()[0].style.overflow = "hidden";
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "translateY(" + styles.slide + "%)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'maskTop':
-                    $target[0].style[this._prefix + 'ClipPath'] = 'inset(0 0 '+ styles.mask + '% 0)'
+                case "maskTop":
+                    element.style.setProperty(
+                        "clip-path",
+                        "inset(0 0 " + styles.mask + "% 0)",
+                        "important"
+                    );
                     break;
-                case 'maskBottom':
-                    $target[0].style[this._prefix + 'ClipPath'] = 'inset('+  styles.mask + '% 0 0 0)';
+                case "maskBottom":
+                    element.style.setProperty(
+                        "clip-path",
+                        "inset(" + styles.mask + "% 0 0 0)",
+                        "important"
+                    );
                     break;
-                case 'maskRight':
-                    $target[0].style[this._prefix + 'ClipPath'] = 'inset(0 0 0 ' +  styles.mask + '%)';
+                case "maskRight":
+                    element.style.setProperty(
+                        "clip-path",
+                        "inset(0 0 0 " + styles.mask + "%)",
+                        "important"
+                    );
                     break;
-                case 'maskLeft':
-                    $target[0].style[this._prefix + 'ClipPath'] = 'inset(0 ' +  styles.mask + '% 0 0)';
+                case "maskLeft":
+                    element.style.setProperty(
+                        "clip-path",
+                        "inset(0 " + styles.mask + "% 0 0)",
+                        "important"
+                    );
                     break;
-                case 'rotateIn':
-                    $target[0].style[this._prefix + 'Transform'] = 'rotate(' + -1 * styles.rotate + 'deg)';
+                case "rotateIn":
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "rotate(" + -1 * styles.rotate + "deg)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'rotateOut':
-                    $target[0].style[this._prefix + 'Transform'] = 'rotate(' + styles.rotate + 'deg)';
+                case "rotateOut":
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms(
+                            "rotate(" + styles.rotate + "deg)"
+                        ),
+                        "important"
+                    );
                     break;
-                case 'fadeScale':
-                    $target[0].style.opacity                     = styles.opacity;
-                    $target[0].style[this._prefix + 'Transform'] = 'scale(' + styles.scale + ')';
+                case "fadeScale":
+                    element.style.setProperty(
+                        "opacity",
+                        this._combineOpacity(styles.opacity),
+                        "important"
+                    );
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms("scale(" + styles.scale + ")"),
+                        "important"
+                    );
                     break;
-                case 'scale':
-                    $target[0].style[this._prefix + 'Transform'] = 'scale(' + styles.scale + ')';
+                case "scale":
+                    element.style.setProperty(
+                        "transform",
+                        this._combineTransforms("scale(" + styles.scale + ")"),
+                        "important"
+                    );
                     break;
                 default:
                     return;
@@ -20230,50 +20685,55 @@ window.averta = {};
         /**
          * update the styles
          */
-        update: function() {
-            if ( $window.width() <= this.settings.disableScrollAnims ) {
+        update: function () {
+            if ($window.width() <= this.settings.disableScrollAnims) {
                 this.disable();
             } else {
-                this._setStyles( this.$element, $window.scrollTop() );
+                this._setStyles(this.$element, $window.scrollTop());
             }
         },
 
         /**
          * Enables the scroll effect in box
          */
-        enable: function() {
-            $window.on( 'resize scroll', this.update );
+        enable: function () {
+            $window.on("resize scroll", this.update);
             this.update();
         },
 
         /**
          * Disables the scroll effect in box
          */
-        disable: function() {
-            $window.off( 'resize scroll', this.update );
+        disable: function () {
+            $window.off("resize scroll", this.update);
         },
 
-        destroy: function() {
+        destroy: function () {
             this.disable();
-        }
+        },
     });
 
     // A really lightweight plugin wrapper around the constructor,
     // preventing against multiple instantiations
-    $.fn[ pluginName ] = function( options ) {
+    $.fn[pluginName] = function (options) {
         var _arguments = arguments;
-        return this.each(function() {
-            if ( !$.data( this, "plugin_" + pluginName ) ) {
-                 $.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
-            } else if ( typeof options === 'string' && options.indexOf(0) !== '_' )  {
+        return this.each(function () {
+            if (!$.data(this, "plugin_" + pluginName)) {
+                $.data(this, "plugin_" + pluginName, new Plugin(this, options));
+            } else if (
+                typeof options === "string" &&
+                options.indexOf(0) !== "_"
+            ) {
                 // access to public methods method
-                var plugin = $.data( this, "plugin_" + pluginName);
-                plugin[options].apply( plugin, Array.prototype.slice.call( _arguments, 1 ) );
+                var plugin = $.data(this, "plugin_" + pluginName);
+                plugin[options].apply(
+                    plugin,
+                    Array.prototype.slice.call(_arguments, 1)
+                );
             }
         });
     };
-
-})( jQuery, window, document );
+})(jQuery, window, document);
 
 
 /*! 

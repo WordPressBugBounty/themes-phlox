@@ -814,15 +814,9 @@ body.wp-admin #wpwrap #qm { margin-left: 160px !important; }
 .axi-switch > small { background: #fff; border-radius: 100%; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); height: 28px; height: 14px; position: absolute; top: 0; width: 28px; top: 50%; transform: translateY(-50%); width: 14px; }
 .customize-control .axi-switch { position: absolute; right: 0; top: 2px; }
 
-input:checked+.axi-switch {
-  background-color: #2F5F91;
-  border-color: #2F5F91;
-}
+input:checked + .axi-switch { background-color: #2F5F91; border-color: #2F5F91; }
+input:checked + .axi-switch > small { right: 0; left: auto; }
 
-input:checked+.axi-switch>small {
-  right: 0;
-  left: auto;
-}
 /*!------------------------------------
   WP AttachmentMedia
 --------------------------------------*/
@@ -1310,7 +1304,7 @@ input:checked+.axi-switch>small {
 .aux-welcome-page-feedback .aux-sending-status .ajax-progress, .aux-welcome-page-feedback .aux-sending-status .ajax-response { float: left; }
 .aux-welcome-page-feedback .aux-sending-status .ajax-progress { margin-right: 5px; margin-top: 2px; }
 .aux-welcome-page-feedback .aux-sending-status .ajax-response ._success { margin-right: 5px; color: #00BA26; font-weight: 600; font-size: 14px; }
-.aux-welcome-page-feedback.aux-feedback-notice { max-width: 500px; padding: 40px; background-color: #fff; position: fixed; border-radius: 7px; z-index: 2; box-shadow: 10px 10px 100px 0px #000000; transition: all 1500ms cubic-bezier(0.76, 0, 0.24, 1) 500ms; opacity: 1; transform: translateX(0px); }
+.aux-welcome-page-feedback.aux-feedback-notice { max-width: 500px; padding: 40px; background-color: #fff; position: fixed; border-radius: 7px; z-index: 3; box-shadow: 10px 10px 100px 0px #000000; transition: all 1500ms cubic-bezier(0.76, 0, 0.24, 1) 500ms; opacity: 1; transform: translateX(0px); }
 .aux-welcome-page-feedback.aux-feedback-notice:after { left: -16px; border: solid 8px transparent; content: ""; height: 0; width: 0; position: absolute; pointer-events: none; border-right-color: #ffffff; top: 35px; }
 .aux-welcome-page-feedback.aux-feedback-notice.aux-not-animated { opacity: 0; transform: translateX(45px); }
 .aux-welcome-page-feedback.aux-feedback-notice a { text-decoration: auto; box-shadow: none; }
@@ -1448,15 +1442,8 @@ input:checked+.axi-switch>small {
 .auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper { width: 20%; display: flex; align-items: center; }
 .auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper .axi-switch { margin: 0 8px; width: 33px; height: 18px; background-color: #0074a2 !important; border-color: #0074a2 !important; }
 .auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper .axi-switch > small { width: 16px; height: 16px; }
-.auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper input:checked+.axi-switch {
-  background-color: #2F5F91;
-  border-color: #2F5F91;
-}
-
-.auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper input:checked+.axi-switch>small {
-  right: 0;
-  left: auto;
-}
+.auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper input:checked + .axi-switch { background-color: #2F5F91; border-color: #2F5F91; }
+.auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper input:checked + .axi-switch > small { right: 0; left: auto; }
 .auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-group-wrapper span { font-size: 16px; }
 .auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-filters-wrapper { width: 64%; }
 .auxin-wizard-panel .aux-welcome-page-templates .aux-isotope-filters .aux-isotope-search-wrapper { width: 16%; }
