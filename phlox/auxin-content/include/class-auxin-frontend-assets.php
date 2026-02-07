@@ -4,7 +4,7 @@
  *
  * 
  * @package    Auxin
- * @author     averta (c) 2014-2025
+ * @author     averta (c) 2014-2026
  * @link       http://averta.net
  */
 
@@ -58,11 +58,15 @@ class Auxin_Frontend_Assets {
         wp_enqueue_script( 'auxin-modernizr' , THEME_URL . 'js/solo/modernizr-custom.min.js' , null, $this->version, false );
 
 
+        wp_enqueue_script( 'select2', THEME_URL . 'js/solo/select2/select2.full.js', array( 'jquery' ), "4.1.0", true );
+        wp_enqueue_script( 'perfect-scrollbar', THEME_URL . 'js/solo/perfect-scrollbar/perfect-scrollbar.js', [], "1.5.2", true );
+
+
         if ( apply_filters( 'auxin_load_minified_assets', true ) ) {
-            wp_enqueue_script( 'auxin-plugins' , THEME_URL . 'js/plugins.min.js' , array( 'jquery', 'masonry', 'imagesloaded' ), $this->version, TRUE );
+            wp_enqueue_script( 'auxin-plugins' , THEME_URL . 'js/plugins.min.js' , array( 'jquery', 'masonry', 'imagesloaded', 'select2', 'perfect-scrollbar' ), $this->version, TRUE );
             wp_enqueue_script( 'auxin-scripts' , THEME_URL . 'js/scripts.min.js' , array( 'auxin-plugins' ), $this->version, TRUE );
         } else {
-            wp_enqueue_script( 'auxin-plugins' , THEME_URL . 'js/plugins.js' , array( 'jquery', 'masonry', 'imagesloaded' ), $this->version, TRUE );
+            wp_enqueue_script( 'auxin-plugins' , THEME_URL . 'js/plugins.js' , array( 'jquery', 'masonry', 'imagesloaded', 'select2', 'perfect-scrollbar' ), $this->version, TRUE );
             wp_enqueue_script( 'auxin-scripts' , THEME_URL . 'js/scripts.js' , array( 'auxin-plugins' ), $this->version, TRUE );
         }
 

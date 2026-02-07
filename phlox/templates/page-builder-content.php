@@ -6,7 +6,7 @@
  *
  * 
  * @package    Auxin
- * @author     averta (c) 2014-2025
+ * @author     averta (c) 2014-2026
  * @link       http://averta.net
  */
 get_header(); ?>

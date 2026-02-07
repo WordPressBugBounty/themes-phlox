@@ -1,10 +1,10 @@
 === Phlox  ===
 Contributors: averta, averta_support
 Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, grid-layout, custom-menu, custom-colors, editor-style, featured-images, featured-image-header, footer-widgets, full-width-template, post-formats, sticky-post, theme-options, translation-ready, blog, e-commerce, portfolio, threaded-comments, translation-ready
-Requires PHP: 5.4
+Requires PHP: 7.0
 Requires at least: 4.6
-Tested up to: 6.8.1
-Stable tag: 2.17.11
+Tested up to: 6.9
+Stable tag: 2.17.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,6 @@ Phlox is a modern, lightweight and customizable theme perfect for almost any typ
 3. Click on the 'Activate' button to use your new theme right away.
 4. Navigate to Appearance > Phlox for a guide on how to get started with this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize the theme.
-
 
 
 == Copyright ==
@@ -94,6 +93,9 @@ Phlox bundles the following third-party resources:
 
 
 == Changelog ==
+
+= 2.17.12 =
+- [Fix]: Compatibility with WP 6.9 applied.
 
 = 2.17.7 =
 - [Fix]: Resolved a warning notice related to translation hooks in WordPress 6.8.0.

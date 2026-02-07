@@ -4,7 +4,7 @@
  *
  * 
  * @package    Auxin
- * @author     averta (c) 2014-2025
+ * @author     averta (c) 2014-2026
  * @link       http://averta.net
  */
 
@@ -113,6 +113,13 @@ function auxin_theme_register_recommended_plugins() {
             'slug'       => 'contact-form-7',
             'required'   => false,
             'categories' => array()
+        ),
+
+        array(
+            'name'       => __('Ultra Addons for Contact Form 7', 'phlox'),
+            'slug'       => 'ultimate-addons-for-contact-form-7',
+            'required'   => false,
+            'categories' => array('recommended')
         ),
 
         array(

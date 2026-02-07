@@ -4,7 +4,7 @@
  *
  * 
  * @package    Auxin
- * @author     averta (c) 2014-2025
+ * @author     averta (c) 2014-2026
  * @link       http://averta.net
 */
 
@@ -88,11 +88,17 @@ class Auxin_Admin_Assets {
         // Ace editor
         wp_register_script('ace-editor'   , ADMIN_JS_URL . 'solo/ace/ace.js', null, "1.1.7");
 
+        // Select2 4.1.0
+        wp_register_script('select2'      , THEME_URL . 'js/solo/select2/select2.full.js', ['jquery'], "4.1.0" );
+
+        // Perfect Scrollbar 1.5.2
+        wp_register_script('perfect-scrollbar', THEME_URL . 'js/solo/perfect-scrollbar/perfect-scrollbar.js', null, "1.5.2" );
+
         wp_enqueue_script('auxin_global'  , ADMIN_JS_URL . 'global.js'  , array( 'jquery', 'jquery-ui-core', 'json2' ), $this->version );
 
         // Contains all essential plugins
         wp_register_script( 'auxin_plugins' , ADMIN_JS_URL . 'plugins.js',
-            array( 'auxin_global', 'jquery-ui-slider', 'jquery-ui-sortable', 'base64', 'ace-editor' ), $this->version
+            array( 'auxin_global', 'jquery-ui-slider', 'jquery-ui-sortable', 'base64', 'ace-editor', 'select2', 'perfect-scrollbar' ), $this->version
         );
 
         // Contains all general scripts
